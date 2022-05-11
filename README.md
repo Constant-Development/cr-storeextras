@@ -102,7 +102,7 @@ Constant Development Discord: https://discord.gg/gSQbshCNv4
         ['label'] = 'Rainbow Slushy',                     
         ['weight'] = 750,         
         ['type'] = 'item',         
-        ['image'] = 'slushy.png',                
+        ['image'] = 'rainbowslushy.png',                
         ['unique'] = true,     
         ['useable'] = true,     
         ['shouldClose'] = true,       
