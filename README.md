@@ -16,6 +16,14 @@ Constant RolePlay Discord: https://discord.gg/constantroleplay
  * Consumeables for each 'Consumeable'
  * Ability to add 'Benefits' to 'Consumeables'
 
+# To Do List
+
+* Locate SuperDonut Image
+* Locate 'Pouring' Sound
+* Implement Configurable Cooldown
+* Implement Beer Casing Product
+* Modulate Entire System
+
 # How To Install
 
 ## Step One
@@ -261,3 +269,9 @@ end)
  * If you wish to use these Images, you may.
 
 * Inserting an Image can be done with base QBCore Inventory an LJ Inventory by placing the Image inside of qb/lj-inventory/html/images
+
+## Factor Two
+* Within the 'sound' File you will find a Sound relating to the 'Functions
+ * If you wish to use these Sounds, you may.
+
+* Inserting a Sound would be done by locating your interact-sound file and further locating 'Config.InteractSound' and setting it to 'true'

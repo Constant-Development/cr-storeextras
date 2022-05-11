@@ -84,9 +84,11 @@ RegisterNetEvent('cr-247extras:client:redslushy', function()
     local circles = math.random(4,8)
     local success = exports['qb-lock']:StartLockPickCircle(circles, seconds, success)
     if success then
-        TriggerServerEvent("InteractSound_SV:PlayOnSource", "pour-drink", 0.1)
+        if Config.InteractSound == true then
+            TriggerServerEvent("InteractSound_SV:PlayOnSource", "pour-drink", 0.1)
+        end
         TaskStartScenarioInPlace(ped, "WORLD_HUMAN_HANG_OUT_STREET", 0, true)
-        QBCore.Functions.Progressbar("hospital_waiting", "Making a Good Slushy...", 10000, false, true, {
+        QBCore.Functions.Progressbar("red_slushy", "Making a Good Slushy...", 10000, false, true, {
             disableMovement = false,
             disableCarMovement = true,
             disableMouse = false,
@@ -111,9 +113,11 @@ RegisterNetEvent('cr-247extras:client:greenslushy', function()
     local circles = math.random(4,8)
     local success = exports['qb-lock']:StartLockPickCircle(circles, seconds, success)
     if success then
-        TriggerServerEvent("InteractSound_SV:PlayOnSource", "pour-drink", 0.1)
+        if Config.InteractSound == true then
+            TriggerServerEvent("InteractSound_SV:PlayOnSource", "pour-drink", 0.1)
+        end
         TaskStartScenarioInPlace(ped, "WORLD_HUMAN_HANG_OUT_STREET", 0, true)
-        QBCore.Functions.Progressbar("hospital_waiting", "Making a Good Slushy...", 10000, false, true, {
+        QBCore.Functions.Progressbar("green_slushy", "Making a Good Slushy...", 10000, false, true, {
             disableMovement = false,
             disableCarMovement = true,
             disableMouse = false,
@@ -138,9 +142,11 @@ RegisterNetEvent('cr-247extras:client:orangeslushy', function()
     local circles = math.random(4,8)
     local success = exports['qb-lock']:StartLockPickCircle(circles, seconds, success)
     if success then
-        TriggerServerEvent("InteractSound_SV:PlayOnSource", "pour-drink", 0.1)
+        if Config.InteractSound == true then
+            TriggerServerEvent("InteractSound_SV:PlayOnSource", "pour-drink", 0.1)
+        end
         TaskStartScenarioInPlace(ped, "WORLD_HUMAN_HANG_OUT_STREET", 0, true)
-        QBCore.Functions.Progressbar("hospital_waiting", "Making a Good Slushy...", 10000, false, true, {
+        QBCore.Functions.Progressbar("orange_slushy", "Making a Good Slushy...", 10000, false, true, {
             disableMovement = false,
             disableCarMovement = true,
             disableMouse = false,
@@ -165,9 +171,11 @@ RegisterNetEvent('cr-247extras:client:yellowslushy', function()
     local circles = math.random(4,8)
     local success = exports['qb-lock']:StartLockPickCircle(circles, seconds, success)
     if success then
-        TriggerServerEvent("InteractSound_SV:PlayOnSource", "pour-drink", 0.1)
+        if Config.InteractSound == true then
+            TriggerServerEvent("InteractSound_SV:PlayOnSource", "pour-drink", 0.1)
+        end
         TaskStartScenarioInPlace(ped, "WORLD_HUMAN_HANG_OUT_STREET", 0, true)
-        QBCore.Functions.Progressbar("hospital_waiting", "Making a Good Slushy...", 10000, false, true, {
+        QBCore.Functions.Progressbar("yellow_slushy", "Making a Good Slushy...", 10000, false, true, {
             disableMovement = false,
             disableCarMovement = true,
             disableMouse = false,
@@ -192,9 +200,11 @@ RegisterNetEvent('cr-247extras:client:blueslushy', function()
     local circles = math.random(4,8)
     local success = exports['qb-lock']:StartLockPickCircle(circles, seconds, success)
     if success then
-        TriggerServerEvent("InteractSound_SV:PlayOnSource", "pour-drink", 0.1)
+        if Config.InteractSound == true then
+            TriggerServerEvent("InteractSound_SV:PlayOnSource", "pour-drink", 0.1)
+        end
         TaskStartScenarioInPlace(ped, "WORLD_HUMAN_HANG_OUT_STREET", 0, true)
-        QBCore.Functions.Progressbar("hospital_waiting", "Making a Good Slushy...", 10000, false, true, {
+        QBCore.Functions.Progressbar("blue_slushy", "Making a Good Slushy...", 10000, false, true, {
             disableMovement = false,
             disableCarMovement = true,
             disableMouse = false,
@@ -219,9 +229,11 @@ RegisterNetEvent('cr-247extras:client:rainbowslushy', function()
     local circles = math.random(4,8)
     local success = exports['qb-lock']:StartLockPickCircle(circles, seconds, success)
     if success then
-        TriggerServerEvent("InteractSound_SV:PlayOnSource", "pour-drink", 0.1)
+        if Config.InteractSound == true then
+            TriggerServerEvent("InteractSound_SV:PlayOnSource", "pour-drink", 0.1)
+        end
         TaskStartScenarioInPlace(ped, "WORLD_HUMAN_HANG_OUT_STREET", 0, true)
-        QBCore.Functions.Progressbar("hospital_waiting", "Making a Good Slushy...", 10000, false, true, {
+        QBCore.Functions.Progressbar("rainbow_slushy", "Making a Good Slushy...", 10000, false, true, {
             disableMovement = false,
             disableCarMovement = true,
             disableMouse = false,
@@ -246,9 +258,11 @@ RegisterNetEvent('cr-247extras:client:sluckyduckydonut', function()
     local circles = math.random(4,8)
     local success = exports['qb-lock']:StartLockPickCircle(circles, seconds, success)
     if success then
-        TriggerServerEvent("InteractSound_SV:PlayOnSource", "deepfried", 0.1)
+        if Config.InteractSound == true then
+            TriggerServerEvent("InteractSound_SV:PlayOnSource", "deepfried", 0.1)
+        end
         TaskStartScenarioInPlace(ped, "WORLD_HUMAN_HANG_OUT_STREET", 0, true)
-        QBCore.Functions.Progressbar("hospital_waiting", "Grabbing the right Slucky Bucky Donut...", 10000, false, true, {
+        QBCore.Functions.Progressbar("slucky_bucky_donut", "Grabbing the right Slucky Bucky Donut...", 10000, false, true, {
             disableMovement = false,
             disableCarMovement = true,
             disableMouse = false,
