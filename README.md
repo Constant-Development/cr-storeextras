@@ -136,6 +136,7 @@ ConsumeablesEatSuperDonut = {
 
 ConsumeablesSlushy = {
     ["redslushy"] = math.random(15, 25),
+    ["orangeslushy"] = math.random(15, 25),
     ["blueslushy"] = math.random(15, 25),
     ["yellowslushy"] = math.random(15, 25),
     ["greenslushy"] = math.random(15, 25),
