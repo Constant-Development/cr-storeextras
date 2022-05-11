@@ -1,17 +1,12 @@
 local QBCore = exports['qb-core']:GetCoreObject()
 
 local slushy = {
-
-    `prop_slush_dispenser`,
-
-    `prop_juice_dispenser`
-
+    "prop_slush_dispenser",
+    "prop_juice_dispenser",
 }
 
 local sluckyduckydonut = {
-
-    `v_ret_247_donuts`,
-
+    "v_ret_247_donuts",
 }
 
 exports['qb-target']:AddTargetModel(slushy,{

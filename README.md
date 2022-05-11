@@ -6,6 +6,7 @@ Constant Development Discord: https://discord.gg/gSQbshCNv4
 
 ## Dependencies
 - [qb-target](https://github.com/Renewed-Scripts/qb-target)
+- [qb-lock](https://github.com/Nathan-FiveM/qb-lock)
 
 ## Features
 * Slushy Machine's
