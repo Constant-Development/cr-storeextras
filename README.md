@@ -2,10 +2,7 @@
 
 # Developed By Constant Development
 
-Direct Creator: SixGrams#0544
-
 Constant Development Discord: https://discord.gg/gSQbshCNv4
-Constant RolePlay Discord: https://discord.gg/constantroleplay
 
 ## Dependencies
 - [qb-target](https://github.com/Renewed-Scripts/qb-target)
