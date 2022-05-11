@@ -16,9 +16,9 @@ Constant RolePlay Discord: https://discord.gg/constantroleplay
  * Consumeables for each 'Consumeable'
  * Ability to add 'Benefits' to 'Consumeables'
 
-## How To Install
+# How To Install
 
-# Step One
+## Step One
 * Place the following snippet inside of qb-core/shared/items.lua
 ```
     ['redslushy'] = {
@@ -121,7 +121,7 @@ Constant RolePlay Discord: https://discord.gg/constantroleplay
 * If you are using a base Inventory(Without Decay) remove "created" and "decay"
 * If you are using a base Inventory(With Decay) remove "created"
 
-# Step Two
+## Step Two
 * Place the following snippet inside of qb-smallresources/config.lua
 ```
 ConsumeablesEatSuperDonut = {
@@ -137,7 +137,7 @@ ConsumeablesSlushy = {
 }
 ```
 
-# Step Three
+## Step Three
 * Place the following snippet inside of qb-smallresources/client/consumeables.lua
 ```
 function AddArmor()
@@ -194,7 +194,7 @@ RegisterNetEvent('consumables:client:EatSuperDonut', function(itemName)
 end)
 ```
 
-# Step Four
+## Step Four
 * Place the following snippet inside of qb-smallresources/server/consumeables.lua
 ```
 QBCore.Functions.CreateUseableItem("rainbowslushy", function(source, item)
@@ -254,9 +254,9 @@ QBCore.Functions.CreateUseableItem("superdonut", function(source, item)
 end)
 ```
 
-## Extra Installation Factors
+# Extra Installation Factors
 
-# Factor One
+## Factor One
 * Within the 'images' File you will find Images relating to each Item.
  * If you wish to use these Images, you may.
 
