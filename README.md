@@ -163,6 +163,7 @@ RegisterNetEvent('consumables:client:slushy', function(itemName)
         disableMouse = false,
         disableCombat = true,
     }, {}, {}, {}, function() -- Done
+        ClearPedTasks(PlayerPedId())
         TriggerEvent("inventory:client:ItemBox", QBCore.Shared.Items[itemName], "remove")
         TriggerServerEvent("QBCore:Server:SetMetaData", "thirst", QBCore.Functions.GetPlayerData().metadata["thirst"] + ConsumeablesSlushy[itemName])
         TriggerServerEvent('hud:server:RelieveStress', math.random(2, 4))
@@ -191,6 +192,7 @@ RegisterNetEvent('consumables:client:EatSuperDonut', function(itemName)
 		disableMouse = false,
 		disableCombat = true,
     }, {}, {}, {}, function() -- Done
+        ClearPedTasks(PlayerPedId())
         TriggerEvent("inventory:client:ItemBox", QBCore.Shared.Items[itemName], "remove")
         TriggerEvent('animations:client:EmoteCommandStart', {"c"})
         RunFast()
