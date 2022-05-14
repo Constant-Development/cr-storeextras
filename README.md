@@ -120,7 +120,9 @@
         ["useable"] = true,
         ["shouldClose"] = true,
         ["combinable"] = nil,
-        ["description"] = "A Donut filled with Juices!"
+        ["description"] = "A Donut filled with Juices!",
+        ["created"] = nil,
+        ["decay"] = 3.0
     },
     ["vanillaicecream"] = {
         ["name"] = "vanillaicecream",
@@ -132,7 +134,9 @@
         ["useable"] = true,
         ["shouldClose"] = true,
         ["combinable"] = nil,
-        ["description"] = "A bowl filled with Vanilla Ice Cream!"
+        ["description"] = "A bowl filled with Vanilla Ice Cream!",
+        ["created"] = nil,
+        ["decay"] = 0.5
     },
     ["chocolateicecream"] = {
         ["name"] = "chocolateicecream",
@@ -144,7 +148,9 @@
         ["useable"] = true,
         ["shouldClose"] = true,
         ["combinable"] = nil,
-        ["description"] = "A bowl filled with Chocolate Ice Cream!"
+        ["description"] = "A bowl filled with Chocolate Ice Cream!",
+        ["created"] = nil,
+        ["decay"] = 0.5
     },
     ["minticecream"] = {
         ["name"] = "minticecream",
@@ -156,7 +162,9 @@
         ["useable"] = true,
         ["shouldClose"] = true,
         ["combinable"] = nil,
-        ["description"] = "A bowl filled with Mint Ice Cream!"
+        ["description"] = "A bowl filled with Mint Ice Cream!",
+        ["created"] = nil,
+        ["decay"] = 0.5
     },
     ["cookiesandcreamicecream"] = {
         ["name"] = "cookiesandcreamicecream",
@@ -168,7 +176,9 @@
         ["useable"] = true,
         ["shouldClose"] = true,
         ["combinable"] = nil,
-        ["description"] = "A bowl filled with Cookies & Cream Ice Cream!"
+        ["description"] = "A bowl filled with Cookies & Cream Ice Cream!",
+        ["created"] = nil,
+        ["decay"] = 0.5
     },
     ["bubblegum_gumball"] = {
         ["name"] = "bubblegum_gumball",
@@ -180,7 +190,9 @@
         ["useable"] = true,
         ["shouldClose"] = true,
         ["combinable"] = nil,
-        ["description"] = "A BubbleGum GumBall from the local Store!"
+        ["description"] = "A BubbleGum GumBall from the local Store!",
+        ["created"] = nil,
+        ["decay"] = 6.5
     },
     ["blueberry_gumball"] = {
         ["name"] = "blueberry_gumball",
@@ -192,7 +204,9 @@
         ["useable"] = true,
         ["shouldClose"] = true,
         ["combinable"] = nil,
-        ["description"] = "A Blueberry GumBall from the local Store!"
+        ["description"] = "A Blueberry GumBall from the local Store!",
+        ["created"] = nil,
+        ["decay"] = 6.5
     },
     ["banana_gumball"] = {
         ["name"] = "banana_gumball",
@@ -204,7 +218,9 @@
         ["useable"] = true,
         ["shouldClose"] = true,
         ["combinable"] = nil,
-        ["description"] = "A Banana GumBall from the local Store!"
+        ["description"] = "A Banana GumBall from the local Store!",
+        ["created"] = nil,
+        ["decay"] = 6.5
     },
     ["mint_gumball"] = {
         ["name"] = "mint_gumball",
@@ -216,7 +232,9 @@
         ["useable"] = true,
         ["shouldClose"] = true,
         ["combinable"] = nil,
-        ["description"] = "A Mint GumBall from the local Store!"
+        ["description"] = "A Mint GumBall from the local Store!",
+        ["created"] = nil,
+        ["decay"] = 6.5
     },
     ["cherry_gumball"] = {
         ["name"] = "cherry_gumball",
@@ -228,7 +246,9 @@
         ["useable"] = true,
         ["shouldClose"] = true,
         ["combinable"] = nil,
-        ["description"] = "A Cherry GumBall from the local Store!"
+        ["description"] = "A Cherry GumBall from the local Store!",
+        ["created"] = nil,
+        ["decay"] = 6.5
     },
 ```
 * If you are using a base Inventory(Without Decay) remove "created" and "decay"

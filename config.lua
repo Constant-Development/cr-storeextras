@@ -31,6 +31,26 @@ Config.SlushyCooldownTime = 5 -- Time is in Minutes
 Config.SluckyBuckyDonutCooldownTime = 5 -- Time is in Minutes
 Config.GumballStandCooldownTime = 5 -- Time is in Minutes
 
+Config.SlushyCost = {
+    RedSlushy = 3,
+    GreenSlushy = 3,
+    OrangeSlushy = 3,
+    YellowSlushy = 3,
+    BlueSlushy = 3,
+    RainbowSlushy = 3,
+}
+
+Config.SluckyBuckyDonutCost = 8
+
+Config.IceCreamCost = {
+    VanillaIceCream = 6,
+    ChocolateIceCream = 6,
+    MintIceCream = 6,
+    CookiesAndCreamIceCream = 6,
+}
+
+Config.GumBallCost = 1
+
 Config.BubbleGumStandFailChance = true
  -- True = Chance for GumBall Stand to not give GumBall
  -- False = Chance Disabled
