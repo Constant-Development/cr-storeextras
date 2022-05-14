@@ -1,4 +1,4 @@
-# cr-247extras
+# cr-storeextras
 
 # Developed By Constant Development
 

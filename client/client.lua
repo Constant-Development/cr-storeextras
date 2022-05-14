@@ -35,10 +35,10 @@ local function Notify(notifType, message, title)
 	end
 end
 
-RegisterNetEvent('cr-247extras:client:RedSlushy')
-AddEventHandler('cr-247extras:client:RedSlushy', function()
+RegisterNetEvent('cr-storeextras:client:RedSlushy')
+AddEventHandler('cr-storeextras:client:RedSlushy', function()
     local ped = PlayerPedId()
-    QBCore.Functions.TriggerCallback('cr-247extras:server:SlushyCooldown', function(result)
+    QBCore.Functions.TriggerCallback('cr-storeextras:server:SlushyCooldown', function(result)
         if result then
             if Config.Minigame == true then
                 local seconds = math.random(10,12)
@@ -57,8 +57,8 @@ AddEventHandler('cr-247extras:client:RedSlushy', function()
                     }, {}, {}, {}, function()
                         Notify(1, Config.Notifications["SlushyGive"], Config.Notifications["okok_Title"])
                         ClearPedTasks(PlayerPedId())
-                        TriggerServerEvent('cr-247extras:server:GiveRedSlushy')
-                        TriggerServerEvent('cr-247extras:server:SetSlushyCooldown')
+                        TriggerServerEvent('cr-storeextras:server:GiveRedSlushy')
+                        TriggerServerEvent('cr-storeextras:server:SetSlushyCooldown')
                     end, function()
                         ClearPedTasks(PlayerPedId())
                         Notify(3, Config.Notifications["ProgressbarCancelled"], Config.Notifications["okok_Title"])
@@ -80,8 +80,8 @@ AddEventHandler('cr-247extras:client:RedSlushy', function()
                 }, {}, {}, {}, function()
                     Notify(1, Config.Notifications["SlushyGive"], Config.Notifications["okok_Title"])
                     ClearPedTasks(PlayerPedId())
-                    TriggerServerEvent('cr-247extras:server:GiveRedSlushy')
-                    TriggerServerEvent('cr-247extras:server:SetSlushyCooldown')
+                    TriggerServerEvent('cr-storeextras:server:GiveRedSlushy')
+                    TriggerServerEvent('cr-storeextras:server:SetSlushyCooldown')
                 end, function()
                     ClearPedTasks(PlayerPedId())
                     Notify(3, Config.Notifications["ProgressbarCancelled"], Config.Notifications["okok_Title"])
@@ -93,10 +93,10 @@ AddEventHandler('cr-247extras:client:RedSlushy', function()
     end)
 end)
 
-RegisterNetEvent('cr-247extras:client:GreenSlushy')
-AddEventHandler('cr-247extras:client:GreenSlushy', function()
+RegisterNetEvent('cr-storeextras:client:GreenSlushy')
+AddEventHandler('cr-storeextras:client:GreenSlushy', function()
     local ped = PlayerPedId()
-    QBCore.Functions.TriggerCallback('cr-247extras:server:SlushyCooldown', function(result)
+    QBCore.Functions.TriggerCallback('cr-storeextras:server:SlushyCooldown', function(result)
         if result then
             if Config.Minigame == true then
                 local seconds = math.random(10,12)
@@ -115,8 +115,8 @@ AddEventHandler('cr-247extras:client:GreenSlushy', function()
                     }, {}, {}, {}, function()
                         Notify(1, Config.Notifications["SlushyGive"], Config.Notifications["okok_Title"])
                         ClearPedTasks(PlayerPedId())
-                        TriggerServerEvent('cr-247extras:server:GiveGreenSlushy')
-                        TriggerServerEvent('cr-247extras:server:SetSlushyCooldown')
+                        TriggerServerEvent('cr-storeextras:server:GiveGreenSlushy')
+                        TriggerServerEvent('cr-storeextras:server:SetSlushyCooldown')
                     end, function()
                         ClearPedTasks(PlayerPedId())
                         Notify(3, Config.Notifications["ProgressbarCancelled"], Config.Notifications["okok_Title"])
@@ -138,8 +138,8 @@ AddEventHandler('cr-247extras:client:GreenSlushy', function()
                 }, {}, {}, {}, function()
                     Notify(1, Config.Notifications["SlushyGive"], Config.Notifications["okok_Title"])
                     ClearPedTasks(PlayerPedId())
-                    TriggerServerEvent('cr-247extras:server:GiveGreenSlushy')
-                    TriggerServerEvent('cr-247extras:server:SetSlushyCooldown')
+                    TriggerServerEvent('cr-storeextras:server:GiveGreenSlushy')
+                    TriggerServerEvent('cr-storeextras:server:SetSlushyCooldown')
                 end, function()
                     ClearPedTasks(PlayerPedId())
                     Notify(3, Config.Notifications["ProgressbarCancelled"], Config.Notifications["okok_Title"])
@@ -151,10 +151,10 @@ AddEventHandler('cr-247extras:client:GreenSlushy', function()
     end)
 end)
 
-RegisterNetEvent('cr-247extras:client:OrangeSlushy')
-AddEventHandler('cr-247extras:client:OrangeSlushy', function()
+RegisterNetEvent('cr-storeextras:client:OrangeSlushy')
+AddEventHandler('cr-storeextras:client:OrangeSlushy', function()
     local ped = PlayerPedId()
-    QBCore.Functions.TriggerCallback('cr-247extras:server:SlushyCooldown', function(result)
+    QBCore.Functions.TriggerCallback('cr-storeextras:server:SlushyCooldown', function(result)
         if result then
             if Config.Minigame == true then
                 local seconds = math.random(10,12)
@@ -173,8 +173,8 @@ AddEventHandler('cr-247extras:client:OrangeSlushy', function()
                     }, {}, {}, {}, function()
                         Notify(1, Config.Notifications["SlushyGive"], Config.Notifications["okok_Title"])
                         ClearPedTasks(PlayerPedId())
-                        TriggerServerEvent('cr-247extras:server:GiveOrangeSlushy')
-                        TriggerServerEvent('cr-247extras:server:SetSlushyCooldown')
+                        TriggerServerEvent('cr-storeextras:server:GiveOrangeSlushy')
+                        TriggerServerEvent('cr-storeextras:server:SetSlushyCooldown')
                     end, function()
                         ClearPedTasks(PlayerPedId())
                         Notify(3, Config.Notifications["ProgressbarCancelled"], Config.Notifications["okok_Title"])
@@ -196,8 +196,8 @@ AddEventHandler('cr-247extras:client:OrangeSlushy', function()
                 }, {}, {}, {}, function()
                     Notify(1, Config.Notifications["SlushyGive"], Config.Notifications["okok_Title"])
                     ClearPedTasks(PlayerPedId())
-                    TriggerServerEvent('cr-247extras:server:GiveOrangeSlushy')
-                    TriggerServerEvent('cr-247extras:server:SetSlushyCooldown')
+                    TriggerServerEvent('cr-storeextras:server:GiveOrangeSlushy')
+                    TriggerServerEvent('cr-storeextras:server:SetSlushyCooldown')
                 end, function()
                     ClearPedTasks(PlayerPedId())
                     Notify(3, Config.Notifications["ProgressbarCancelled"], Config.Notifications["okok_Title"])
@@ -209,10 +209,10 @@ AddEventHandler('cr-247extras:client:OrangeSlushy', function()
     end)
 end)
 
-RegisterNetEvent('cr-247extras:client:YellowSlushy')
-AddEventHandler('cr-247extras:client:YellowSlushy', function()
+RegisterNetEvent('cr-storeextras:client:YellowSlushy')
+AddEventHandler('cr-storeextras:client:YellowSlushy', function()
     local ped = PlayerPedId()
-    QBCore.Functions.TriggerCallback('cr-247extras:server:SlushyCooldown', function(result)
+    QBCore.Functions.TriggerCallback('cr-storeextras:server:SlushyCooldown', function(result)
         if result then
             if Config.Minigame == true then
                 local seconds = math.random(10,12)
@@ -231,8 +231,8 @@ AddEventHandler('cr-247extras:client:YellowSlushy', function()
                    }, {}, {}, {}, function()
                         Notify(1, Config.Notifications["SlushyGive"], Config.Notifications["okok_Title"])
                         ClearPedTasks(PlayerPedId())
-                        TriggerServerEvent('cr-247extras:server:GiveYellowSlushy')
-                        TriggerServerEvent('cr-247extras:server:SetSlushyCooldown')
+                        TriggerServerEvent('cr-storeextras:server:GiveYellowSlushy')
+                        TriggerServerEvent('cr-storeextras:server:SetSlushyCooldown')
                     end, function()
                         ClearPedTasks(PlayerPedId())
                         Notify(3, Config.Notifications["ProgressbarCancelled"], Config.Notifications["okok_Title"])
@@ -254,8 +254,8 @@ AddEventHandler('cr-247extras:client:YellowSlushy', function()
                 }, {}, {}, {}, function()
                     Notify(1, Config.Notifications["SlushyGive"], Config.Notifications["okok_Title"])
                     ClearPedTasks(PlayerPedId())
-                    TriggerServerEvent('cr-247extras:server:GiveYellowSlushy')
-                    TriggerServerEvent('cr-247extras:server:SetSlushyCooldown')
+                    TriggerServerEvent('cr-storeextras:server:GiveYellowSlushy')
+                    TriggerServerEvent('cr-storeextras:server:SetSlushyCooldown')
                 end, function()
                     ClearPedTasks(PlayerPedId())
                     Notify(3, Config.Notifications["ProgressbarCancelled"], Config.Notifications["okok_Title"])
@@ -267,10 +267,10 @@ AddEventHandler('cr-247extras:client:YellowSlushy', function()
     end)
 end)
 
-RegisterNetEvent('cr-247extras:client:BlueSlushy')
-AddEventHandler('cr-247extras:client:BlueSlushy', function()
+RegisterNetEvent('cr-storeextras:client:BlueSlushy')
+AddEventHandler('cr-storeextras:client:BlueSlushy', function()
     local ped = PlayerPedId()
-    QBCore.Functions.TriggerCallback('cr-247extras:server:SlushyCooldown', function(result)
+    QBCore.Functions.TriggerCallback('cr-storeextras:server:SlushyCooldown', function(result)
         if result then
             if Config.Minigame == true then
                 local seconds = math.random(10,12)
@@ -289,8 +289,8 @@ AddEventHandler('cr-247extras:client:BlueSlushy', function()
                     }, {}, {}, {}, function()
                         Notify(1, Config.Notifications["SlushyGive"], Config.Notifications["okok_Title"])
                         ClearPedTasks(PlayerPedId())
-                        TriggerServerEvent('cr-247extras:server:GiveBlueSlushy')
-                        TriggerServerEvent('cr-247extras:server:SetSlushyCooldown')
+                        TriggerServerEvent('cr-storeextras:server:GiveBlueSlushy')
+                        TriggerServerEvent('cr-storeextras:server:SetSlushyCooldown')
                     end, function()
                         ClearPedTasks(PlayerPedId())
                         Notify(3, Config.Notifications["ProgressbarCancelled"], Config.Notifications["okok_Title"])
@@ -312,8 +312,8 @@ AddEventHandler('cr-247extras:client:BlueSlushy', function()
                 }, {}, {}, {}, function()
                     Notify(1, Config.Notifications["SlushyGive"], Config.Notifications["okok_Title"])
                     ClearPedTasks(PlayerPedId())
-                    TriggerServerEvent('cr-247extras:server:GiveBlueSlushy')
-                    TriggerServerEvent('cr-247extras:server:SetSlushyCooldown')
+                    TriggerServerEvent('cr-storeextras:server:GiveBlueSlushy')
+                    TriggerServerEvent('cr-storeextras:server:SetSlushyCooldown')
                 end, function()
                     ClearPedTasks(PlayerPedId())
                     Notify(3, Config.Notifications["ProgressbarCancelled"], Config.Notifications["okok_Title"])
@@ -325,10 +325,10 @@ AddEventHandler('cr-247extras:client:BlueSlushy', function()
     end)
 end)
 
-RegisterNetEvent('cr-247extras:client:RainbowSlushy')
-AddEventHandler('cr-247extras:client:RainbowSlushy', function()
+RegisterNetEvent('cr-storeextras:client:RainbowSlushy')
+AddEventHandler('cr-storeextras:client:RainbowSlushy', function()
     local ped = PlayerPedId()
-    QBCore.Functions.TriggerCallback('cr-247extras:server:SlushyCooldown', function(result)
+    QBCore.Functions.TriggerCallback('cr-storeextras:server:SlushyCooldown', function(result)
         if result then
             if Config.Minigame == true then
                 local seconds = math.random(4,8)
@@ -347,8 +347,8 @@ AddEventHandler('cr-247extras:client:RainbowSlushy', function()
                     }, {}, {}, {}, function()
                         Notify(1, Config.Notifications["SlushyGive"], Config.Notifications["okok_Title"])
                         ClearPedTasks(PlayerPedId())
-                        TriggerServerEvent('cr-247extras:server:GiveRainbowSlushy')
-                        TriggerServerEvent('cr-247extras:server:SetSlushyCooldown')
+                        TriggerServerEvent('cr-storeextras:server:GiveRainbowSlushy')
+                        TriggerServerEvent('cr-storeextras:server:SetSlushyCooldown')
                     end, function()
                         ClearPedTasks(PlayerPedId())
                         Notify(3, Config.Notifications["ProgressbarCancelled"], Config.Notifications["okok_Title"])
@@ -370,8 +370,8 @@ AddEventHandler('cr-247extras:client:RainbowSlushy', function()
                 }, {}, {}, {}, function()
                     Notify(1, Config.Notifications["SlushyGive"], Config.Notifications["okok_Title"])
                     ClearPedTasks(PlayerPedId())
-                    TriggerServerEvent('cr-247extras:server:GiveRainbowSlushy')
-                    TriggerServerEvent('cr-247extras:server:SetSlushyCooldown')
+                    TriggerServerEvent('cr-storeextras:server:GiveRainbowSlushy')
+                    TriggerServerEvent('cr-storeextras:server:SetSlushyCooldown')
                 end, function()
                     ClearPedTasks(PlayerPedId())
                     Notify(3, Config.Notifications["ProgressbarCancelled"], Config.Notifications["okok_Title"])
@@ -383,10 +383,10 @@ AddEventHandler('cr-247extras:client:RainbowSlushy', function()
     end)
 end)
 
-RegisterNetEvent('cr-247extras:client:SluckyBuckyDonut')
-AddEventHandler('cr-247extras:client:SluckyBuckyDonut', function()
+RegisterNetEvent('cr-storeextras:client:SluckyBuckyDonut')
+AddEventHandler('cr-storeextras:client:SluckyBuckyDonut', function()
     local ped = PlayerPedId()
-    QBCore.Functions.TriggerCallback('cr-247extras:server:SluckyBuckyDonutCooldown', function(result)
+    QBCore.Functions.TriggerCallback('cr-storeextras:server:SluckyBuckyDonutCooldown', function(result)
         if result then
             if Config.Minigame == true then
                 local seconds = math.random(2,4)
@@ -405,8 +405,8 @@ AddEventHandler('cr-247extras:client:SluckyBuckyDonut', function()
                     }, {}, {}, {}, function()
                         Notify(1, Config.Notifications["SluckyDonutGive"], Config.Notifications["okok_Title"])
                         ClearPedTasks(PlayerPedId())
-                        TriggerServerEvent('cr-247extras:server:GiveSluckyDonut')
-                        TriggerServerEvent('cr-247extras:server:SetSluckyBuckyDonutCooldown')
+                        TriggerServerEvent('cr-storeextras:server:GiveSluckyDonut')
+                        TriggerServerEvent('cr-storeextras:server:SetSluckyBuckyDonutCooldown')
                     end, function()
                         ClearPedTasks(PlayerPedId())
                         Notify(3, Config.Notifications["ProgressbarCancelled"], Config.Notifications["okok_Title"])
@@ -428,8 +428,8 @@ AddEventHandler('cr-247extras:client:SluckyBuckyDonut', function()
                 }, {}, {}, {}, function()
                     Notify(1, Config.Notifications["SluckyDonutGive"], Config.Notifications["okok_Title"])
                     ClearPedTasks(PlayerPedId())
-                    TriggerServerEvent('cr-247extras:server:GiveSluckyDonut')
-                    TriggerServerEvent('cr-247extras:server:SetSluckyBuckyDonutCooldown')
+                    TriggerServerEvent('cr-storeextras:server:GiveSluckyDonut')
+                    TriggerServerEvent('cr-storeextras:server:SetSluckyBuckyDonutCooldown')
                 end, function()
                     ClearPedTasks(PlayerPedId())
                     Notify(3, Config.Notifications["ProgressbarCancelled"], Config.Notifications["okok_Title"])
@@ -441,10 +441,10 @@ AddEventHandler('cr-247extras:client:SluckyBuckyDonut', function()
     end)
 end)
 
-RegisterNetEvent('cr-247extras:client:VanillaIceCream')
-AddEventHandler('cr-247extras:client:VanillaIceCream', function()
+RegisterNetEvent('cr-storeextras:client:VanillaIceCream')
+AddEventHandler('cr-storeextras:client:VanillaIceCream', function()
     local ped = PlayerPedId()
-    QBCore.Functions.TriggerCallback('cr-247extras:server:IceCreamCooldown', function(result)
+    QBCore.Functions.TriggerCallback('cr-storeextras:server:IceCreamCooldown', function(result)
         if result then
             if Config.Minigame == true then
                 local seconds = math.random(6,12)
@@ -463,8 +463,8 @@ AddEventHandler('cr-247extras:client:VanillaIceCream', function()
                     }, {}, {}, {}, function()
                         Notify(1, Config.Notifications["IceCreamGive"], Config.Notifications["okok_Title"])
                         ClearPedTasks(PlayerPedId())
-                        TriggerServerEvent('cr-247extras:server:GiveVanillaIceCream')
-                        TriggerServerEvent('cr-247extras:server:SetIceCreamCooldown')
+                        TriggerServerEvent('cr-storeextras:server:GiveVanillaIceCream')
+                        TriggerServerEvent('cr-storeextras:server:SetIceCreamCooldown')
                     end, function()
                         ClearPedTasks(PlayerPedId())
                         Notify(3, Config.Notifications["ProgressbarCancelled"], Config.Notifications["okok_Title"])
@@ -486,8 +486,8 @@ AddEventHandler('cr-247extras:client:VanillaIceCream', function()
                 }, {}, {}, {}, function()
                     Notify(1, Config.Notifications["IceCreamGive"], Config.Notifications["okok_Title"])
                     ClearPedTasks(PlayerPedId())
-                    TriggerServerEvent('cr-247extras:server:GiveVanillaIceCream')
-                    TriggerServerEvent('cr-247extras:server:SetIceCreamCooldown')
+                    TriggerServerEvent('cr-storeextras:server:GiveVanillaIceCream')
+                    TriggerServerEvent('cr-storeextras:server:SetIceCreamCooldown')
                 end, function()
                     ClearPedTasks(PlayerPedId())
                     Notify(3, Config.Notifications["ProgressbarCancelled"], Config.Notifications["okok_Title"])
@@ -499,10 +499,10 @@ AddEventHandler('cr-247extras:client:VanillaIceCream', function()
     end)
 end)
 
-RegisterNetEvent('cr-247extras:client:ChocolateIceCream')
-AddEventHandler('cr-247extras:client:ChocolateIceCream', function()
+RegisterNetEvent('cr-storeextras:client:ChocolateIceCream')
+AddEventHandler('cr-storeextras:client:ChocolateIceCream', function()
     local ped = PlayerPedId()
-    QBCore.Functions.TriggerCallback('cr-247extras:server:IceCreamCooldown', function(result)
+    QBCore.Functions.TriggerCallback('cr-storeextras:server:IceCreamCooldown', function(result)
         if result then
             if Config.Minigame == true then
                 local seconds = math.random(6,12)
@@ -521,8 +521,8 @@ AddEventHandler('cr-247extras:client:ChocolateIceCream', function()
                     }, {}, {}, {}, function()
                         Notify(1, Config.Notifications["IceCreamGive"], Config.Notifications["okok_Title"])
                         ClearPedTasks(PlayerPedId())
-                        TriggerServerEvent('cr-247extras:server:GiveChocolateIceCream')
-                        TriggerServerEvent('cr-247extras:server:SetIceCreamCooldown')
+                        TriggerServerEvent('cr-storeextras:server:GiveChocolateIceCream')
+                        TriggerServerEvent('cr-storeextras:server:SetIceCreamCooldown')
                     end, function()
                         ClearPedTasks(PlayerPedId())
                         Notify(3, Config.Notifications["ProgressbarCancelled"], Config.Notifications["okok_Title"])
@@ -544,8 +544,8 @@ AddEventHandler('cr-247extras:client:ChocolateIceCream', function()
                 }, {}, {}, {}, function()
                     Notify(1, Config.Notifications["IceCreamGive"], Config.Notifications["okok_Title"])
                     ClearPedTasks(PlayerPedId())
-                    TriggerServerEvent('cr-247extras:server:GiveChocolateIceCream')
-                    TriggerServerEvent('cr-247extras:server:SetIceCreamCooldown')
+                    TriggerServerEvent('cr-storeextras:server:GiveChocolateIceCream')
+                    TriggerServerEvent('cr-storeextras:server:SetIceCreamCooldown')
                 end, function()
                     ClearPedTasks(PlayerPedId())
                     Notify(3, Config.Notifications["ProgressbarCancelled"], Config.Notifications["okok_Title"])
@@ -557,10 +557,10 @@ AddEventHandler('cr-247extras:client:ChocolateIceCream', function()
     end)
 end)
 
-RegisterNetEvent('cr-247extras:client:MintIceCream')
-AddEventHandler('cr-247extras:client:MintIceCream', function()
+RegisterNetEvent('cr-storeextras:client:MintIceCream')
+AddEventHandler('cr-storeextras:client:MintIceCream', function()
     local ped = PlayerPedId()
-    QBCore.Functions.TriggerCallback('cr-247extras:server:IceCreamCooldown', function(result)
+    QBCore.Functions.TriggerCallback('cr-storeextras:server:IceCreamCooldown', function(result)
         if result then
             if Config.Minigame == true then
                 local seconds = math.random(6,12)
@@ -579,8 +579,8 @@ AddEventHandler('cr-247extras:client:MintIceCream', function()
                     }, {}, {}, {}, function()
                         Notify(1, Config.Notifications["IceCreamGive"], Config.Notifications["okok_Title"])
                         ClearPedTasks(PlayerPedId())
-                        TriggerServerEvent('cr-247extras:server:GiveMintIceCream')
-                        TriggerServerEvent('cr-247extras:server:SetIceCreamCooldown')
+                        TriggerServerEvent('cr-storeextras:server:GiveMintIceCream')
+                        TriggerServerEvent('cr-storeextras:server:SetIceCreamCooldown')
                     end, function()
                         ClearPedTasks(PlayerPedId())
                         Notify(3, Config.Notifications["ProgressbarCancelled"], Config.Notifications["okok_Title"])
@@ -602,8 +602,8 @@ AddEventHandler('cr-247extras:client:MintIceCream', function()
                 }, {}, {}, {}, function()
                     Notify(1, Config.Notifications["IceCreamGive"], Config.Notifications["okok_Title"])
                     ClearPedTasks(PlayerPedId())
-                    TriggerServerEvent('cr-247extras:server:GiveMintIceCream')
-                    TriggerServerEvent('cr-247extras:server:SetIceCreamCooldown')
+                    TriggerServerEvent('cr-storeextras:server:GiveMintIceCream')
+                    TriggerServerEvent('cr-storeextras:server:SetIceCreamCooldown')
                 end, function()
                     ClearPedTasks(PlayerPedId())
                     Notify(3, Config.Notifications["ProgressbarCancelled"], Config.Notifications["okok_Title"])
@@ -615,10 +615,10 @@ AddEventHandler('cr-247extras:client:MintIceCream', function()
     end)
 end)
 
-RegisterNetEvent('cr-247extras:client:CookiesAndCreamIceCream')
-AddEventHandler('cr-247extras:client:CookiesAndCreamIceCream', function()
+RegisterNetEvent('cr-storeextras:client:CookiesAndCreamIceCream')
+AddEventHandler('cr-storeextras:client:CookiesAndCreamIceCream', function()
     local ped = PlayerPedId()
-    QBCore.Functions.TriggerCallback('cr-247extras:server:IceCreamCooldown', function(result)
+    QBCore.Functions.TriggerCallback('cr-storeextras:server:IceCreamCooldown', function(result)
         if result then
             if Config.Minigame == true then
                 local seconds = math.random(6,12)
@@ -637,8 +637,8 @@ AddEventHandler('cr-247extras:client:CookiesAndCreamIceCream', function()
                     }, {}, {}, {}, function()
                         Notify(1, Config.Notifications["IceCreamGive"], Config.Notifications["okok_Title"])
                         ClearPedTasks(PlayerPedId())
-                        TriggerServerEvent('cr-247extras:server:GiveCookiesAndCreamIceCream')
-                        TriggerServerEvent('cr-247extras:server:SetIceCreamCooldown')
+                        TriggerServerEvent('cr-storeextras:server:GiveCookiesAndCreamIceCream')
+                        TriggerServerEvent('cr-storeextras:server:SetIceCreamCooldown')
                     end, function()
                         ClearPedTasks(PlayerPedId())
                         Notify(3, Config.Notifications["ProgressbarCancelled"], Config.Notifications["okok_Title"])
@@ -660,8 +660,8 @@ AddEventHandler('cr-247extras:client:CookiesAndCreamIceCream', function()
                 }, {}, {}, {}, function()
                     Notify(1, Config.Notifications["IceCreamGive"], Config.Notifications["okok_Title"])
                     ClearPedTasks(PlayerPedId())
-                    TriggerServerEvent('cr-247extras:server:GiveCookiesAndCreamIceCream')
-                    TriggerServerEvent('cr-247extras:server:SetIceCreamCooldown')
+                    TriggerServerEvent('cr-storeextras:server:GiveCookiesAndCreamIceCream')
+                    TriggerServerEvent('cr-storeextras:server:SetIceCreamCooldown')
                 end, function()
                     ClearPedTasks(PlayerPedId())
                     Notify(3, Config.Notifications["ProgressbarCancelled"], Config.Notifications["okok_Title"])
@@ -673,10 +673,10 @@ AddEventHandler('cr-247extras:client:CookiesAndCreamIceCream', function()
     end)
 end)
 
-RegisterNetEvent('cr-247extras:client:BubbleGumStand')
-AddEventHandler('cr-247extras:client:BubbleGumStand', function()
+RegisterNetEvent('cr-storeextras:client:BubbleGumStand')
+AddEventHandler('cr-storeextras:client:BubbleGumStand', function()
     local ped = PlayerPedId()
-    QBCore.Functions.TriggerCallback('cr-247extras:server:GumBallStandCooldown', function(result)
+    QBCore.Functions.TriggerCallback('cr-storeextras:server:GumBallStandCooldown', function(result)
         if result then
             if Config.Minigame == true then
                 local seconds = math.random(5,10)
@@ -695,8 +695,8 @@ AddEventHandler('cr-247extras:client:BubbleGumStand', function()
                     }, {}, {}, {}, function()
                         Notify(1, Config.Notifications["BubbleGumGive"], Config.Notifications["okok_Title"])
                         ClearPedTasks(PlayerPedId())
-                        TriggerServerEvent('cr-247extras:server:GiveBubbleGum')
-                        TriggerServerEvent('cr-247extras:server:SetGumballStandCooldown')
+                        TriggerServerEvent('cr-storeextras:server:GiveBubbleGum')
+                        TriggerServerEvent('cr-storeextras:server:SetGumballStandCooldown')
                     end, function()
                         ClearPedTasks(PlayerPedId())
                         Notify(3, Config.Notifications["ProgressbarCancelled"], Config.Notifications["okok_Title"])
@@ -718,8 +718,8 @@ AddEventHandler('cr-247extras:client:BubbleGumStand', function()
                 }, {}, {}, {}, function()
                     Notify(1, Config.Notifications["BubbleGumGive"], Config.Notifications["okok_Title"])
                     ClearPedTasks(PlayerPedId())
-                    TriggerServerEvent('cr-247extras:server:GiveBubbleGum')
-                    TriggerServerEvent('cr-247extras:server:SetGumballStandCooldown')
+                    TriggerServerEvent('cr-storeextras:server:GiveBubbleGum')
+                    TriggerServerEvent('cr-storeextras:server:SetGumballStandCooldown')
                 end, function()
                     ClearPedTasks(PlayerPedId())
                     Notify(3, Config.Notifications["ProgressbarCancelled"], Config.Notifications["okok_Title"])
@@ -731,12 +731,12 @@ AddEventHandler('cr-247extras:client:BubbleGumStand', function()
     end)
 end)
 
-RegisterNetEvent('cr-247extras:client:BubbleGumStandFail')
-AddEventHandler('cr-247extras:client:BubbleGumStandFail', function()
+RegisterNetEvent('cr-storeextras:client:BubbleGumStandFail')
+AddEventHandler('cr-storeextras:client:BubbleGumStandFail', function()
     if Config.BubbleGumStandFailChance == true then
         Notify(3, Config.Notifications["BubbleGumStandFailGive"], Config.Notifications["okok_Title"])
     else
-        TriggerServerEvent('cr-247extras:server:GiveBubbleGum')
+        TriggerServerEvent('cr-storeextras:server:GiveBubbleGum')
     end
 end)
 
@@ -745,42 +745,42 @@ Citizen.CreateThread(function()
         options = {
             {
                 type = "client",
-                event = "cr-247extras:client:RedSlushy",
+                event = "cr-storeextras:client:RedSlushy",
                 icon = "fas fa-wine-bottle",
                 label = "Pour Red Slushy",
                 price = 3,
             },
             {
                 type = "client",
-                event = "cr-247extras:client:GreenSlushy",
+                event = "cr-storeextras:client:GreenSlushy",
                 icon = "fas fa-wine-bottle",
                 label = "Pour Green Slushy",
                 price = 3,
             },
             {
                 type = "client",
-                event = "cr-247extras:client:OrangeSlushy",
+                event = "cr-storeextras:client:OrangeSlushy",
                 icon = "fas fa-wine-bottle",
                 label = "Pour Orange Slushy",
                 price = 3,
             },
             {
                 type = "client",
-                event = "cr-247extras:client:YellowSlushy",
+                event = "cr-storeextras:client:YellowSlushy",
                 icon = "fas fa-wine-bottle",
                 label = "Pour Yellow Slushy",
                 price = 3,
             },
             {
                 type = "client",
-                event = "cr-247extras:client:BlueSlushy",
+                event = "cr-storeextras:client:BlueSlushy",
                 icon = "fas fa-wine-bottle",
                 label = "Pour Blue Slushy",
                 price = 3,
             },
             {
                 type = "client",
-                event = "cr-247extras:client:RainbowSlushy",
+                event = "cr-storeextras:client:RainbowSlushy",
                 icon = "fas fa-wine-bottle",
                 label = "Pour Rainbow Slushy",
                 price = 5,
@@ -792,7 +792,7 @@ Citizen.CreateThread(function()
         options = {
             {
                 type = "client",
-                event = "cr-247extras:client:SluckyBuckyDonut",
+                event = "cr-storeextras:client:SluckyBuckyDonut",
                 icon = "fas fa-hand-holding",
                 label = "Grab Slucky Bucky Donut",
                 price = 8,
@@ -804,28 +804,28 @@ Citizen.CreateThread(function()
         options = {
             {
                 type = "client",
-                event = "cr-247extras:client:VanillaIceCream",
+                event = "cr-storeextras:client:VanillaIceCream",
                 icon = "fas fa-ice-cream",
                 label = "Scoop Vanilla Ice Cream",
                 price = 6,
             },
             {
                 type = "client",
-                event = "cr-247extras:client:ChocolateIceCream",
+                event = "cr-storeextras:client:ChocolateIceCream",
                 icon = "fas fa-ice-cream",
                 label = "Scoop Chocolate Ice Cream",
                 price = 6,
             },
             {
                 type = "client",
-                event = "cr-247extras:client:MintIceCream",
+                event = "cr-storeextras:client:MintIceCream",
                 icon = "fas fa-ice-cream",
                 label = "Scoop Mint Ice Cream",
                 price = 6,
             },
             {
                 type = "client",
-                event = "cr-247extras:client:CookiesAndCreamIceCream",
+                event = "cr-storeextras:client:CookiesAndCreamIceCream",
                 icon = "fas fa-ice-cream",
                 label = "Scoop Cookies & Cream Ice Cream",
                 price = 6,
@@ -837,7 +837,7 @@ Citizen.CreateThread(function()
         options = {
             {
                 type = "client",
-                event = "cr-247extras:client:BubbleGumStand",
+                event = "cr-storeextras:client:BubbleGumStand",
                 icon = "fas fa-coin",
                 label = "Grab GumBall",
                 price = 1,
