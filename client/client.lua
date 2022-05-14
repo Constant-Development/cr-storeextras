@@ -43,7 +43,7 @@ AddEventHandler('cr-storeextras:client:RedSlushy', function()
             if Config.Minigame == true then
                 local seconds = math.random(10,12)
                 local circles = math.random(4,8)
-                local success = exports['qb-lock']:StartLockPickCircle(circles, seconds, success)
+                local success = exports['qb-lock']:StartLockPickCircle(circles, seconds)
                 if success then
                     if Config.InteractSound == true then
                         TriggerServerEvent("InteractSound_SV:PlayOnSource", "pour-slushy", 0.3)
@@ -101,7 +101,7 @@ AddEventHandler('cr-storeextras:client:GreenSlushy', function()
             if Config.Minigame == true then
                 local seconds = math.random(10,12)
                 local circles = math.random(4,8)
-                local success = exports['qb-lock']:StartLockPickCircle(circles, seconds, success)
+                local success = exports['qb-lock']:StartLockPickCircle(circles, seconds)
                 if success then
                     if Config.InteractSound == true then
                         TriggerServerEvent("InteractSound_SV:PlayOnSource", "pour-slushy", 0.3)
@@ -159,7 +159,7 @@ AddEventHandler('cr-storeextras:client:OrangeSlushy', function()
             if Config.Minigame == true then
                 local seconds = math.random(10,12)
                 local circles = math.random(4,8)
-                local success = exports['qb-lock']:StartLockPickCircle(circles, seconds, success)
+                local success = exports['qb-lock']:StartLockPickCircle(circles, seconds)
                 if success then
                     if Config.InteractSound == true then
                         TriggerServerEvent("InteractSound_SV:PlayOnSource", "pour-slushy", 0.3)
@@ -217,7 +217,7 @@ AddEventHandler('cr-storeextras:client:YellowSlushy', function()
             if Config.Minigame == true then
                 local seconds = math.random(10,12)
                 local circles = math.random(4,8)
-                local success = exports['qb-lock']:StartLockPickCircle(circles, seconds, success)
+                local success = exports['qb-lock']:StartLockPickCircle(circles, seconds)
                 if success then
                     if Config.InteractSound == true then
                         TriggerServerEvent("InteractSound_SV:PlayOnSource", "pour-slushy", 0.3)
@@ -275,7 +275,7 @@ AddEventHandler('cr-storeextras:client:BlueSlushy', function()
             if Config.Minigame == true then
                 local seconds = math.random(10,12)
                 local circles = math.random(4,8)
-                local success = exports['qb-lock']:StartLockPickCircle(circles, seconds, success)
+                local success = exports['qb-lock']:StartLockPickCircle(circles, seconds)
                 if success then
                     if Config.InteractSound == true then
                         TriggerServerEvent("InteractSound_SV:PlayOnSource", "pour-slushy", 0.3)
@@ -333,7 +333,7 @@ AddEventHandler('cr-storeextras:client:RainbowSlushy', function()
             if Config.Minigame == true then
                 local seconds = math.random(4,8)
                 local circles = math.random(8,12)
-                local success = exports['qb-lock']:StartLockPickCircle(circles, seconds, success)
+                local success = exports['qb-lock']:StartLockPickCircle(circles, seconds)
                 if success then
                     if Config.InteractSound == true then
                         TriggerServerEvent("InteractSound_SV:PlayOnSource", "pour-slushy", 0.3)
@@ -391,7 +391,7 @@ AddEventHandler('cr-storeextras:client:SluckyBuckyDonut', function()
             if Config.Minigame == true then
                 local seconds = math.random(2,4)
                 local circles = math.random(12,18)
-                local success = exports['qb-lock']:StartLockPickCircle(circles, seconds, success)
+                local success = exports['qb-lock']:StartLockPickCircle(circles, seconds)
                 if success then
                     if Config.InteractSound == true then
                         TriggerServerEvent("InteractSound_SV:PlayOnSource", "deepfried", 0.3)
@@ -449,7 +449,7 @@ AddEventHandler('cr-storeextras:client:VanillaIceCream', function()
             if Config.Minigame == true then
                 local seconds = math.random(6,12)
                 local circles = math.random(5,10)
-                local success = exports['qb-lock']:StartLockPickCircle(circles, seconds, success)
+                local success = exports['qb-lock']:StartLockPickCircle(circles, seconds)
                 if success then
                     if Config.InteractSound == true then
                         TriggerServerEvent("InteractSound_SV:PlayOnSource", "scoopicecream", 0.3)
@@ -507,7 +507,7 @@ AddEventHandler('cr-storeextras:client:ChocolateIceCream', function()
             if Config.Minigame == true then
                 local seconds = math.random(6,12)
                 local circles = math.random(5,10)
-                local success = exports['qb-lock']:StartLockPickCircle(circles, seconds, success)
+                local success = exports['qb-lock']:StartLockPickCircle(circles, seconds)
                 if success then
                     if Config.InteractSound == true then
                         TriggerServerEvent("InteractSound_SV:PlayOnSource", "scoopicecream", 0.3)
@@ -565,7 +565,7 @@ AddEventHandler('cr-storeextras:client:MintIceCream', function()
             if Config.Minigame == true then
                 local seconds = math.random(6,12)
                 local circles = math.random(5,10)
-                local success = exports['qb-lock']:StartLockPickCircle(circles, seconds, success)
+                local success = exports['qb-lock']:StartLockPickCircle(circles, seconds)
                 if success then
                     if Config.InteractSound == true then
                         TriggerServerEvent("InteractSound_SV:PlayOnSource", "scoopicecream", 0.3)
@@ -623,7 +623,7 @@ AddEventHandler('cr-storeextras:client:CookiesAndCreamIceCream', function()
             if Config.Minigame == true then
                 local seconds = math.random(6,12)
                 local circles = math.random(5,10)
-                local success = exports['qb-lock']:StartLockPickCircle(circles, seconds, success)
+                local success = exports['qb-lock']:StartLockPickCircle(circles, seconds)
                 if success then
                     if Config.InteractSound == true then
                         TriggerServerEvent("InteractSound_SV:PlayOnSource", "scoopicecream", 0.3)
@@ -681,7 +681,7 @@ AddEventHandler('cr-storeextras:client:BubbleGumStand', function()
             if Config.Minigame == true then
                 local seconds = math.random(5,10)
                 local circles = math.random(3,5)
-                local success = exports['qb-lock']:StartLockPickCircle(circles, seconds, success)
+                local success = exports['qb-lock']:StartLockPickCircle(circles, seconds)
                 if success then
                     if Config.InteractSound == true then
                         TriggerServerEvent("InteractSound_SV:PlayOnSource", "bubblegumstand", 0.3)
