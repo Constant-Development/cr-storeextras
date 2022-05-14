@@ -9,16 +9,15 @@
 - [qb-lock](https://github.com/Nathan-FiveM/qb-lock)
 
 ## Features
-* Slushy Machine's
-* Slucky Bucky Donut Machine's
- * Consumeables for each 'Consumeable'
- * Ability to add 'Benefits' to 'Consumeables'
+* Consumeables & Benefits for each 'Consumeable'
+* Slushy Machine System's
+* Slucky Bucky Donut Machine System's
+* Ice Cream Freezer System's
+* GumBall Stand System's
 
 # To Do List
 
-* Locate SuperDonut Image
-* Locate 'Pouring' Sound
-* Implement Configurable Cooldown
+* Rework Improper Images
 * Implement Beer Casing Product
 * Modulate Entire System
 
@@ -123,6 +122,114 @@
         ["combinable"] = nil,
         ["description"] = "A Donut filled with Juices!"
     },
+    ["vanillaicecream"] = {
+        ["name"] = "vanillaicecream",
+        ["label"] = "Vanilla Ice Cream",
+        ["weight"] = 350,
+        ["type"] = "item",
+        ["image"] = "vanillaicecream.png",
+        ["unique"] = false,
+        ["useable"] = true,
+        ["shouldClose"] = true,
+        ["combinable"] = nil,
+        ["description"] = "A bowl filled with Vanilla Ice Cream!"
+    },
+    ["chocolateicecream"] = {
+        ["name"] = "chocolateicecream",
+        ["label"] = "Chocolate Ice Cream",
+        ["weight"] = 350,
+        ["type"] = "item",
+        ["image"] = "chocolateicecream.png",
+        ["unique"] = false,
+        ["useable"] = true,
+        ["shouldClose"] = true,
+        ["combinable"] = nil,
+        ["description"] = "A bowl filled with Chocolate Ice Cream!"
+    },
+    ["minticecream"] = {
+        ["name"] = "minticecream",
+        ["label"] = "Mint Ice Cream",
+        ["weight"] = 350,
+        ["type"] = "item",
+        ["image"] = "minticecream.png",
+        ["unique"] = false,
+        ["useable"] = true,
+        ["shouldClose"] = true,
+        ["combinable"] = nil,
+        ["description"] = "A bowl filled with Mint Ice Cream!"
+    },
+    ["cookiesandcreamicecream"] = {
+        ["name"] = "cookiesandcreamicecream",
+        ["label"] = "Cookies & Cream Ice Cream",
+        ["weight"] = 350,
+        ["type"] = "item",
+        ["image"] = "cookiesandcreamicecream.png",
+        ["unique"] = false,
+        ["useable"] = true,
+        ["shouldClose"] = true,
+        ["combinable"] = nil,
+        ["description"] = "A bowl filled with Cookies & Cream Ice Cream!"
+    },
+    ["bubblegum_gumball"] = {
+        ["name"] = "bubblegum_gumball",
+        ["label"] = "BubbleGum GumBall",
+        ["weight"] = 50,
+        ["type"] = "item",
+        ["image"] = "bubblegum_gumball.png",
+        ["unique"] = false,
+        ["useable"] = true,
+        ["shouldClose"] = true,
+        ["combinable"] = nil,
+        ["description"] = "A BubbleGum GumBall from the local Store!"
+    },
+    ["blueberry_gumball"] = {
+        ["name"] = "blueberry_gumball",
+        ["label"] = "Blueberry GumBall",
+        ["weight"] = 50,
+        ["type"] = "item",
+        ["image"] = "blueberry_gumball.png",
+        ["unique"] = false,
+        ["useable"] = true,
+        ["shouldClose"] = true,
+        ["combinable"] = nil,
+        ["description"] = "A Blueberry GumBall from the local Store!"
+    },
+    ["banana_gumball"] = {
+        ["name"] = "banana_gumball",
+        ["label"] = "Banana GumBall",
+        ["weight"] = 50,
+        ["type"] = "item",
+        ["image"] = "banana_gumball.png",
+        ["unique"] = false,
+        ["useable"] = true,
+        ["shouldClose"] = true,
+        ["combinable"] = nil,
+        ["description"] = "A Banana GumBall from the local Store!"
+    },
+    ["mint_gumball"] = {
+        ["name"] = "mint_gumball",
+        ["label"] = "Mint GumBall",
+        ["weight"] = 50,
+        ["type"] = "item",
+        ["image"] = "mint_gumball.png",
+        ["unique"] = false,
+        ["useable"] = true,
+        ["shouldClose"] = true,
+        ["combinable"] = nil,
+        ["description"] = "A Mint GumBall from the local Store!"
+    },
+    ["cherry_gumball"] = {
+        ["name"] = "cherry_gumball",
+        ["label"] = "Cherry GumBall",
+        ["weight"] = 50,
+        ["type"] = "item",
+        ["image"] = "cherry_gumball.png",
+        ["unique"] = false,
+        ["useable"] = true,
+        ["shouldClose"] = true,
+        ["combinable"] = nil,
+        ["description"] = "A Cherry GumBall from the local Store!"
+    },
 ```
 * If you are using a base Inventory(Without Decay) remove "created" and "decay"
 * If you are using a base Inventory(With Decay) remove "created"
@@ -141,6 +248,21 @@ ConsumeablesSlushy = {
     ["yellowslushy"] = math.random(15, 25),
     ["greenslushy"] = math.random(15, 25),
     ["rainbowslushy"] = math.random(15, 25),
+}
+
+ConsumeablesEatIceCream = {
+    ["vanillaicecream"] = math.random(12, 20),
+    ["chocolateicecream"] = math.random(12, 20),
+    ["minticecream"] = math.random(15, 24),
+    ["cookiesandcreamicecream"] = math.random(18, 26),
+}
+
+ConsumeablesEatGumBall = {
+    ["bubblegum_gumball"] = math.random(6, 8),
+    ["blueberry_gumball"] = math.random(6, 8),
+    ["banana_gumball"] = math.random(6, 8),
+    ["mint_gumball"] = math.random(6, 8),
+    ["cherry_gumball"] = math.random(6, 8),
 }
 ```
 
@@ -205,6 +327,65 @@ RegisterNetEvent('consumables:client:EatSuperDonut', function(itemName)
         TriggerServerEvent('hud:server:RelieveStress', math.random(2, 8))
     end)
 end)
+
+local function BrainFreeze()
+    local startStamina = 3
+    ShakeGameplayCam('SMALL_EXPLOSION_SHAKE', 0.15)
+    SetRunSprintMultiplierForPlayer(PlayerId(), 1.5)
+    while startStamina > 0 do
+        Wait(2500)
+        ShakeGameplayCam('SMALL_EXPLOSION_SHAKE', 0.18)
+        startStamina = startStamina - 1
+        --RestorePlayerStamina(PlayerId(), 1.0)
+    end
+    startStamina = 0
+    ShakeGameplayCam('SMALL_EXPLOSION_SHAKE', 0.15)
+    SetRunSprintMultiplierForPlayer(PlayerId(), 1.0)
+end
+
+RegisterNetEvent('consumables:client:EatIceCream', function(itemName)
+    TriggerEvent('animations:client:EmoteCommandStart', {"bowl"})
+    QBCore.Functions.Progressbar("eat_icecream", "Eating...", 5000, false, true, {
+        disableMovement = false,
+        disableCarMovement = false,
+		disableMouse = false,
+		disableCombat = true,
+    }, {}, {}, {}, function() -- Done
+        ClearPedTasks(PlayerPedId())
+        TriggerEvent("inventory:client:ItemBox", QBCore.Shared.Items[itemName], "remove")
+        TriggerEvent('animations:client:EmoteCommandStart', {"c"})
+        BrainFreeze()
+        TriggerServerEvent("QBCore:Server:SetMetaData", "hunger", QBCore.Functions.GetPlayerData().metadata["hunger"] + ConsumeablesEatIceCream[itemName])
+        TriggerServerEvent('hud:server:GainStress', math.random(2, 5))
+    end)
+end)
+
+local function GumBall()
+    local startStamina = 3
+    SetRunSprintMultiplierForPlayer(PlayerId(), 1.2)
+    while startStamina > 0 do
+        Wait(500)
+        startStamina = startStamina - 1
+    end
+    startStamina = 0
+    SetRunSprintMultiplierForPlayer(PlayerId(), 1.0)
+end
+
+RegisterNetEvent('consumables:client:EatGumBall', function(itemName)
+    TriggerEvent('animations:client:EmoteCommandStart', {"eat"})
+    QBCore.Functions.Progressbar("eat_gumball", "Eating...", 5000, false, true, {
+        disableMovement = false,
+        disableCarMovement = false,
+		disableMouse = false,
+		disableCombat = true,
+    }, {}, {}, {}, function() -- Done
+        ClearPedTasks(PlayerPedId())
+        TriggerEvent("inventory:client:ItemBox", QBCore.Shared.Items[itemName], "remove")
+        TriggerEvent('animations:client:EmoteCommandStart', {"c"})
+        GumBall()
+        TriggerServerEvent("QBCore:Server:SetMetaData", "hunger", QBCore.Functions.GetPlayerData().metadata["hunger"] + ConsumeablesEatGumBall[itemName])
+    end)
+end)
 ```
 * If you don't want the "Effects", make sure to remove 'RunFast' and 'AddArmor' although 'AddArmor' shouldn't be removed from you're qb-smallresources entirely rather just the Slushy Event.
 
@@ -264,6 +445,78 @@ QBCore.Functions.CreateUseableItem("superdonut", function(source, item)
     local Player = QBCore.Functions.GetPlayer(src)
     if Player.Functions.RemoveItem(item.name, 1, item.slot) then
         TriggerClientEvent("consumables:client:EatSuperDonut", src, item.name)
+    end
+end)
+
+QBCore.Functions.CreateUseableItem("vanillaicecream", function(source, item)
+    local src = source
+    local Player = QBCore.Functions.GetPlayer(src)
+    if Player.Functions.RemoveItem(item.name, 1, item.slot) then
+        TriggerClientEvent("consumables:client:EatIceCream", src, item.name)
+    end
+end)
+
+QBCore.Functions.CreateUseableItem("chocolateicecream", function(source, item)
+    local src = source
+    local Player = QBCore.Functions.GetPlayer(src)
+    if Player.Functions.RemoveItem(item.name, 1, item.slot) then
+        TriggerClientEvent("consumables:client:EatIceCream", src, item.name)
+    end
+end)
+
+QBCore.Functions.CreateUseableItem("minticecream", function(source, item)
+    local src = source
+    local Player = QBCore.Functions.GetPlayer(src)
+    if Player.Functions.RemoveItem(item.name, 1, item.slot) then
+        TriggerClientEvent("consumables:client:EatIceCream", src, item.name)
+    end
+end)
+
+QBCore.Functions.CreateUseableItem("cookiesandcreamicecream", function(source, item)
+    local src = source
+    local Player = QBCore.Functions.GetPlayer(src)
+    if Player.Functions.RemoveItem(item.name, 1, item.slot) then
+        TriggerClientEvent("consumables:client:EatIceCream", src, item.name)
+    end
+end)
+
+QBCore.Functions.CreateUseableItem("bubblegum_gumball", function(source, item)
+    local src = source
+    local Player = QBCore.Functions.GetPlayer(src)
+    if Player.Functions.RemoveItem(item.name, 1, item.slot) then
+        TriggerClientEvent("consumables:client:EatGumBall", src, item.name)
+    end
+end)
+
+QBCore.Functions.CreateUseableItem("blueberry_gumball", function(source, item)
+    local src = source
+    local Player = QBCore.Functions.GetPlayer(src)
+    if Player.Functions.RemoveItem(item.name, 1, item.slot) then
+        TriggerClientEvent("consumables:client:EatGumBall", src, item.name)
+    end
+end)
+
+QBCore.Functions.CreateUseableItem("banana_gumball", function(source, item)
+    local src = source
+    local Player = QBCore.Functions.GetPlayer(src)
+    if Player.Functions.RemoveItem(item.name, 1, item.slot) then
+        TriggerClientEvent("consumables:client:EatGumBall", src, item.name)
+    end
+end)
+
+QBCore.Functions.CreateUseableItem("mint_gumball", function(source, item)
+    local src = source
+    local Player = QBCore.Functions.GetPlayer(src)
+    if Player.Functions.RemoveItem(item.name, 1, item.slot) then
+        TriggerClientEvent("consumables:client:EatGumBall", src, item.name)
+    end
+end)
+
+QBCore.Functions.CreateUseableItem("cherry_gumball", function(source, item)
+    local src = source
+    local Player = QBCore.Functions.GetPlayer(src)
+    if Player.Functions.RemoveItem(item.name, 1, item.slot) then
+        TriggerClientEvent("consumables:client:EatGumBall", src, item.name)
     end
 end)
 ```
