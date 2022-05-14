@@ -113,7 +113,7 @@ AddEventHandler('cr-burnerphones:server:SetSlushyCooldown', function()
     isSlushyCoolDownActive = false
 end)
 
-QBCore.Functions.CreateCallback("cr-burnerphones:server:SlushyCooldown",function(source, cb)
+QBCore.Functions.CreateCallback("cr-burnerphones:server:SlushyCooldown",function(cb)
     if isSlushyCoolDownActive then
         cb(true)
     else
@@ -128,7 +128,7 @@ AddEventHandler('cr-burnerphones:server:SetSluckyBuckyDonutCooldown', function()
     isSluckyBuckyDonutCoolDownActive = false
 end)
 
-QBCore.Functions.CreateCallback("cr-burnerphones:server:SluckyBuckyDonutCooldown",function(source, cb)
+QBCore.Functions.CreateCallback("cr-burnerphones:server:SluckyBuckyDonutCooldown",function(cb)
     if isSluckyBuckyDonutCoolDownActive then
         cb(true)
     else
@@ -143,7 +143,7 @@ AddEventHandler('cr-burnerphones:server:SetIceCreamCooldown', function()
     isIceCreamCoolDownActive = false
 end)
 
-QBCore.Functions.CreateCallback("cr-burnerphones:server:IceCreamCooldown",function(source, cb)
+QBCore.Functions.CreateCallback("cr-burnerphones:server:IceCreamCooldown",function(cb)
     if isIceCreamCoolDownActive then
         cb(true)
     else
@@ -158,7 +158,7 @@ AddEventHandler('cr-burnerphones:server:SetGumballStandCooldown', function()
     isGumballStandCoolDownActive = false
 end)
 
-QBCore.Functions.CreateCallback("cr-burnerphones:server:GumBallStandCooldown",function(source, cb)
+QBCore.Functions.CreateCallback("cr-burnerphones:server:GumBallStandCooldown",function(cb)
     if isGumballStandCoolDownActive then
         cb(true)
     else
