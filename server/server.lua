@@ -5,84 +5,84 @@ isSluckyBuckyDonutCoolDownActive = false
 isIceCreamCoolDownActive = false
 isGumballStandCoolDownActive = false
 
-RegisterNetEvent('cr-247extras:server:GiveYellowSlushy', function()
+RegisterNetEvent('cr-storeextras:server:GiveYellowSlushy', function()
     local src = source
     local Player = QBCore.Functions.GetPlayer(src)
     Player.Functions.AddItem("yellowslushy", 1, false)
     TriggerClientEvent('inventory:client:ItemBox', src, QBCore.Shared.Items["yellowslushy"], "add")
 end)
 
-RegisterNetEvent('cr-247extras:server:GiveOrangeSlushy', function()
+RegisterNetEvent('cr-storeextras:server:GiveOrangeSlushy', function()
     local src = source
     local Player = QBCore.Functions.GetPlayer(src)
     Player.Functions.AddItem("orangeslushy", 1, false)
     TriggerClientEvent('inventory:client:ItemBox', src, QBCore.Shared.Items["orangeslushy"], "add")
 end)
 
-RegisterNetEvent('cr-247extras:server:GiveBlueSlushy', function()
+RegisterNetEvent('cr-storeextras:server:GiveBlueSlushy', function()
     local src = source
     local Player = QBCore.Functions.GetPlayer(src)
     Player.Functions.AddItem("blueslushy", 1, false)
     TriggerClientEvent('inventory:client:ItemBox', src, QBCore.Shared.Items["blueslushy"], "add")
 end)
 
-RegisterNetEvent('cr-247extras:server:GiveRainbowSlushy', function()
+RegisterNetEvent('cr-storeextras:server:GiveRainbowSlushy', function()
     local src = source
     local Player = QBCore.Functions.GetPlayer(src)
     Player.Functions.AddItem("rainbowslushy", 1, false)
     TriggerClientEvent('inventory:client:ItemBox', src, QBCore.Shared.Items["rainbowslushy"], "add")
 end)
 
-RegisterNetEvent('cr-247extras:server:GiveRedSlushy', function()
+RegisterNetEvent('cr-storeextras:server:GiveRedSlushy', function()
     local src = source
     local Player = QBCore.Functions.GetPlayer(src)
     Player.Functions.AddItem("redslushy", 1, false)
     TriggerClientEvent('inventory:client:ItemBox', src, QBCore.Shared.Items["redslushy"], "add")
 end)
 
-RegisterNetEvent('cr-247extras:server:GiveGreenSlushy', function()
+RegisterNetEvent('cr-storeextras:server:GiveGreenSlushy', function()
     local src = source
     local Player = QBCore.Functions.GetPlayer(src)
     Player.Functions.AddItem("greenslushy", 1, false)
     TriggerClientEvent('inventory:client:ItemBox', src, QBCore.Shared.Items["greenslushy"], "add")
 end)
 
-RegisterNetEvent('cr-247extras:server:GiveSluckyDonut', function()
+RegisterNetEvent('cr-storeextras:server:GiveSluckyDonut', function()
     local src = source
     local Player = QBCore.Functions.GetPlayer(src)
     Player.Functions.AddItem("superdonut", 1, false)
     TriggerClientEvent('inventory:client:ItemBox', src, QBCore.Shared.Items["superdonut"], "add")
 end)
 
-RegisterNetEvent('cr-247extras:server:GiveVanillaIceCream', function()
+RegisterNetEvent('cr-storeextras:server:GiveVanillaIceCream', function()
     local src = source
     local Player = QBCore.Functions.GetPlayer(src)
     Player.Functions.AddItem("vanillaicecream", 1, false)
     TriggerClientEvent('inventory:client:ItemBox', src, QBCore.Shared.Items["vanillaicecream"], "add")
 end)
 
-RegisterNetEvent('cr-247extras:server:GiveChocolateIceCream', function()
+RegisterNetEvent('cr-storeextras:server:GiveChocolateIceCream', function()
     local src = source
     local Player = QBCore.Functions.GetPlayer(src)
     Player.Functions.AddItem("chocolateicecream", 1, false)
     TriggerClientEvent('inventory:client:ItemBox', src, QBCore.Shared.Items["chocolateicecream"], "add")
 end)
 
-RegisterNetEvent('cr-247extras:server:GiveMintIceCream', function()
+RegisterNetEvent('cr-storeextras:server:GiveMintIceCream', function()
     local src = source
     local Player = QBCore.Functions.GetPlayer(src)
     Player.Functions.AddItem("minticecream", 1, false)
     TriggerClientEvent('inventory:client:ItemBox', src, QBCore.Shared.Items["minticecream"], "add")
 end)
 
-RegisterNetEvent('cr-247extras:server:GiveCookiesAndCreamIceCream', function()
+RegisterNetEvent('cr-storeextras:server:GiveCookiesAndCreamIceCream', function()
     local src = source
     local Player = QBCore.Functions.GetPlayer(src)
     Player.Functions.AddItem("cookiesandcreamicecream", 1, false)
     TriggerClientEvent('inventory:client:ItemBox', src, QBCore.Shared.Items["cookiesandcreamicecream"], "add")
 end)
 
-RegisterNetEvent('cr-247extras:server:GiveBubbleGum', function()
+RegisterNetEvent('cr-storeextras:server:GiveBubbleGum', function()
     local src = source
     local Player = QBCore.Functions.GetPlayer(src)
     local BubbleGum = math.random(1,52)
@@ -102,18 +102,18 @@ RegisterNetEvent('cr-247extras:server:GiveBubbleGum', function()
         Player.Functions.AddItem("cherry_gumball", 1, false)
         TriggerClientEvent('inventory:client:ItemBox', src, QBCore.Shared.Items["cherry_gumball"], "add")
     elseif BubbleGum >= 51 then
-        TriggerClientEvent('cr-247extras:client:BubbleGumStandFail')
+        TriggerClientEvent('cr-storeextras:client:BubbleGumStandFail')
     end
 end)
 
-RegisterNetEvent('cr-burnerphones:server:SetSlushyCooldown')
-AddEventHandler('cr-burnerphones:server:SetSlushyCooldown', function()
+RegisterNetEvent('cr-storeextras:server:SetSlushyCooldown')
+AddEventHandler('cr-storeextras:server:SetSlushyCooldown', function()
     isSlushyCoolDownActive = true
     Wait((Config.SlushyCooldownTime * 1000) * 60)
     isSlushyCoolDownActive = false
 end)
 
-QBCore.Functions.CreateCallback("cr-burnerphones:server:SlushyCooldown",function(cb)
+QBCore.Functions.CreateCallback("cr-storeextras:server:SlushyCooldown",function(cb)
     if isSlushyCoolDownActive then
         cb(true)
     else
@@ -121,14 +121,14 @@ QBCore.Functions.CreateCallback("cr-burnerphones:server:SlushyCooldown",function
     end
 end)
 
-RegisterNetEvent('cr-burnerphones:server:SetSluckyBuckyDonutCooldown')
-AddEventHandler('cr-burnerphones:server:SetSluckyBuckyDonutCooldown', function()
+RegisterNetEvent('cr-storeextras:server:SetSluckyBuckyDonutCooldown')
+AddEventHandler('cr-storeextras:server:SetSluckyBuckyDonutCooldown', function()
     isSluckyBuckyDonutCoolDownActive = true
     Wait((Config.SluckyBuckyDonutCooldownTime * 1000) * 60)
     isSluckyBuckyDonutCoolDownActive = false
 end)
 
-QBCore.Functions.CreateCallback("cr-burnerphones:server:SluckyBuckyDonutCooldown",function(cb)
+QBCore.Functions.CreateCallback("cr-storeextras:server:SluckyBuckyDonutCooldown",function(cb)
     if isSluckyBuckyDonutCoolDownActive then
         cb(true)
     else
@@ -136,8 +136,8 @@ QBCore.Functions.CreateCallback("cr-burnerphones:server:SluckyBuckyDonutCooldown
     end
 end)
 
-RegisterNetEvent('cr-burnerphones:server:SetIceCreamCooldown')
-AddEventHandler('cr-burnerphones:server:SetIceCreamCooldown', function()
+RegisterNetEvent('cr-storeextras:server:SetIceCreamCooldown')
+AddEventHandler('cr-storeextras:server:SetIceCreamCooldown', function()
     isIceCreamCoolDownActive = true
     Wait((Config.SluckyBuckyDonutCooldownTime * 1000) * 60)
     isIceCreamCoolDownActive = false
@@ -151,14 +151,14 @@ QBCore.Functions.CreateCallback("cr-burnerphones:server:IceCreamCooldown",functi
     end
 end)
 
-RegisterNetEvent('cr-burnerphones:server:SetGumballStandCooldown')
-AddEventHandler('cr-burnerphones:server:SetGumballStandCooldown', function()
+RegisterNetEvent('cr-storeextras:server:SetGumballStandCooldown')
+AddEventHandler('cr-storeextras:server:SetGumballStandCooldown', function()
     isGumballStandCoolDownActive = true
     Wait((Config.GumballStandCooldownTime * 1000) * 60)
     isGumballStandCoolDownActive = false
 end)
 
-QBCore.Functions.CreateCallback("cr-burnerphones:server:GumBallStandCooldown",function(cb)
+QBCore.Functions.CreateCallback("cr-storeextras:server:GumBallStandCooldown",function(cb)
     if isGumballStandCoolDownActive then
         cb(true)
     else
