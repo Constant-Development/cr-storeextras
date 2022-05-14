@@ -2,7 +2,7 @@
 
 # Developed By Constant Development
 
-Constant Development Discord: https://discord.gg/gSQbshCNv4
+[Constant Development Discord](https://discord.gg/gSQbshCNv4)
 
 ## Dependencies
 - [qb-target](https://github.com/Renewed-Scripts/qb-target)
@@ -145,7 +145,7 @@ ConsumeablesSlushy = {
 ```
 
 ## Step Three
-* Place the following snippet inside of qb-smallresources/client/consumeables.lua
+* Replace the following 'AddArmor' Function inside of qb-smallresources/client/consumeables.lua
 ```
 function AddArmor()
     local a = 15
@@ -155,7 +155,11 @@ function AddArmor()
         AddArmourToPed(PlayerPedId(), 1)
     end
 end
+```
 
+## Step Four
+* Place the following snippet inside of qb-smallresources/client/consumeables.lua
+```
 RegisterNetEvent('consumables:client:slushy', function(itemName)
     TriggerEvent('animations:client:EmoteCommandStart', {"cup"})
     QBCore.Functions.Progressbar("drink_something", "Drinking Slushy...", 3500, false, true, {
@@ -202,8 +206,9 @@ RegisterNetEvent('consumables:client:EatSuperDonut', function(itemName)
     end)
 end)
 ```
+* If you don't want the "Effects", make sure to remove 'RunFast' and 'AddArmor' although 'AddArmor' shouldn't be removed from you're qb-smallresources entirely rather just the Slushy Event.
 
-## Step Four
+## Step Five
 * Place the following snippet inside of qb-smallresources/server/consumeables.lua
 ```
 QBCore.Functions.CreateUseableItem("rainbowslushy", function(source, item)
