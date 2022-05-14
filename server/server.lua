@@ -143,7 +143,7 @@ AddEventHandler('cr-storeextras:server:SetIceCreamCooldown', function()
     isIceCreamCoolDownActive = false
 end)
 
-QBCore.Functions.CreateCallback("cr-burnerphones:server:IceCreamCooldown",function(cb)
+QBCore.Functions.CreateCallback("cr-storeextras:server:IceCreamCooldown",function(cb)
     if isIceCreamCoolDownActive then
         cb(true)
     else
