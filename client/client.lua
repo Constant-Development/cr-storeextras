@@ -39,7 +39,7 @@ RegisterNetEvent('cr-storeextras:client:RedSlushy')
 AddEventHandler('cr-storeextras:client:RedSlushy', function()
     local ped = PlayerPedId()
     QBCore.Functions.TriggerCallback('cr-storeextras:server:SlushyCooldown', function(result)
-        if result then
+        if not result then
             if Config.Minigame == true then
                 local seconds = math.random(10,12)
                 local circles = math.random(4,8)
@@ -97,7 +97,7 @@ RegisterNetEvent('cr-storeextras:client:GreenSlushy')
 AddEventHandler('cr-storeextras:client:GreenSlushy', function()
     local ped = PlayerPedId()
     QBCore.Functions.TriggerCallback('cr-storeextras:server:SlushyCooldown', function(result)
-        if result then
+        if not result then
             if Config.Minigame == true then
                 local seconds = math.random(10,12)
                 local circles = math.random(4,8)
@@ -155,7 +155,7 @@ RegisterNetEvent('cr-storeextras:client:OrangeSlushy')
 AddEventHandler('cr-storeextras:client:OrangeSlushy', function()
     local ped = PlayerPedId()
     QBCore.Functions.TriggerCallback('cr-storeextras:server:SlushyCooldown', function(result)
-        if result then
+        if not result then
             if Config.Minigame == true then
                 local seconds = math.random(10,12)
                 local circles = math.random(4,8)
@@ -213,7 +213,7 @@ RegisterNetEvent('cr-storeextras:client:YellowSlushy')
 AddEventHandler('cr-storeextras:client:YellowSlushy', function()
     local ped = PlayerPedId()
     QBCore.Functions.TriggerCallback('cr-storeextras:server:SlushyCooldown', function(result)
-        if result then
+        if not result then
             if Config.Minigame == true then
                 local seconds = math.random(10,12)
                 local circles = math.random(4,8)
@@ -271,7 +271,7 @@ RegisterNetEvent('cr-storeextras:client:BlueSlushy')
 AddEventHandler('cr-storeextras:client:BlueSlushy', function()
     local ped = PlayerPedId()
     QBCore.Functions.TriggerCallback('cr-storeextras:server:SlushyCooldown', function(result)
-        if result then
+        if not result then
             if Config.Minigame == true then
                 local seconds = math.random(10,12)
                 local circles = math.random(4,8)
@@ -329,7 +329,7 @@ RegisterNetEvent('cr-storeextras:client:RainbowSlushy')
 AddEventHandler('cr-storeextras:client:RainbowSlushy', function()
     local ped = PlayerPedId()
     QBCore.Functions.TriggerCallback('cr-storeextras:server:SlushyCooldown', function(result)
-        if result then
+        if not result then
             if Config.Minigame == true then
                 local seconds = math.random(4,8)
                 local circles = math.random(8,12)
@@ -387,7 +387,7 @@ RegisterNetEvent('cr-storeextras:client:SluckyBuckyDonut')
 AddEventHandler('cr-storeextras:client:SluckyBuckyDonut', function()
     local ped = PlayerPedId()
     QBCore.Functions.TriggerCallback('cr-storeextras:server:SluckyBuckyDonutCooldown', function(result)
-        if result then
+        if not result then
             if Config.Minigame == true then
                 local seconds = math.random(2,4)
                 local circles = math.random(12,18)
@@ -445,7 +445,7 @@ RegisterNetEvent('cr-storeextras:client:VanillaIceCream')
 AddEventHandler('cr-storeextras:client:VanillaIceCream', function()
     local ped = PlayerPedId()
     QBCore.Functions.TriggerCallback('cr-storeextras:server:IceCreamCooldown', function(result)
-        if result then
+        if not result then
             if Config.Minigame == true then
                 local seconds = math.random(6,12)
                 local circles = math.random(5,10)
@@ -503,7 +503,7 @@ RegisterNetEvent('cr-storeextras:client:ChocolateIceCream')
 AddEventHandler('cr-storeextras:client:ChocolateIceCream', function()
     local ped = PlayerPedId()
     QBCore.Functions.TriggerCallback('cr-storeextras:server:IceCreamCooldown', function(result)
-        if result then
+        if not result then
             if Config.Minigame == true then
                 local seconds = math.random(6,12)
                 local circles = math.random(5,10)
@@ -561,7 +561,7 @@ RegisterNetEvent('cr-storeextras:client:MintIceCream')
 AddEventHandler('cr-storeextras:client:MintIceCream', function()
     local ped = PlayerPedId()
     QBCore.Functions.TriggerCallback('cr-storeextras:server:IceCreamCooldown', function(result)
-        if result then
+        if not result then
             if Config.Minigame == true then
                 local seconds = math.random(6,12)
                 local circles = math.random(5,10)
@@ -619,7 +619,7 @@ RegisterNetEvent('cr-storeextras:client:CookiesAndCreamIceCream')
 AddEventHandler('cr-storeextras:client:CookiesAndCreamIceCream', function()
     local ped = PlayerPedId()
     QBCore.Functions.TriggerCallback('cr-storeextras:server:IceCreamCooldown', function(result)
-        if result then
+        if not result then
             if Config.Minigame == true then
                 local seconds = math.random(6,12)
                 local circles = math.random(5,10)
@@ -677,7 +677,7 @@ RegisterNetEvent('cr-storeextras:client:BubbleGumStand')
 AddEventHandler('cr-storeextras:client:BubbleGumStand', function()
     local ped = PlayerPedId()
     QBCore.Functions.TriggerCallback('cr-storeextras:server:GumBallStandCooldown', function(result)
-        if result then
+        if not result then
             if Config.Minigame == true then
                 local seconds = math.random(5,10)
                 local circles = math.random(3,5)

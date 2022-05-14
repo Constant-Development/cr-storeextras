@@ -113,7 +113,7 @@ AddEventHandler('cr-storeextras:server:SetSlushyCooldown', function()
     isSlushyCoolDownActive = false
 end)
 
-QBCore.Functions.CreateCallback("cr-storeextras:server:SlushyCooldown",function(source, cb)
+QBCore.Functions.CreateCallback("cr-storeextras:server:SlushyCooldown",function(_, cb)
     if isSlushyCoolDownActive then
         cb(true)
     else
@@ -128,7 +128,7 @@ AddEventHandler('cr-storeextras:server:SetSluckyBuckyDonutCooldown', function()
     isSluckyBuckyDonutCoolDownActive = false
 end)
 
-QBCore.Functions.CreateCallback("cr-storeextras:server:SluckyBuckyDonutCooldown",function(source, cb)
+QBCore.Functions.CreateCallback("cr-storeextras:server:SluckyBuckyDonutCooldown",function(_, cb)
     if isSluckyBuckyDonutCoolDownActive then
         cb(true)
     else
@@ -143,7 +143,7 @@ AddEventHandler('cr-storeextras:server:SetIceCreamCooldown', function()
     isIceCreamCoolDownActive = false
 end)
 
-QBCore.Functions.CreateCallback("cr-storeextras:server:IceCreamCooldown",function(source, cb)
+QBCore.Functions.CreateCallback("cr-storeextras:server:IceCreamCooldown",function(_, cb)
     if isIceCreamCoolDownActive then
         cb(true)
     else
@@ -158,7 +158,7 @@ AddEventHandler('cr-storeextras:server:SetGumballStandCooldown', function()
     isGumballStandCoolDownActive = false
 end)
 
-QBCore.Functions.CreateCallback("cr-storeextras:server:GumBallStandCooldown",function(source, cb)
+QBCore.Functions.CreateCallback("cr-storeextras:server:GumBallStandCooldown",function(_, cb)
     if isGumballStandCoolDownActive then
         cb(true)
     else
