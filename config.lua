@@ -56,7 +56,7 @@ Config.BubbleGumStandFailChance = true
  -- False = Chance Disabled
 
 --Notification Settings
-Config.Notify = "qb" --"qb" = Default (QBCore) | "okok" = OkOkNotify | "mythic" = Mythic Notifications | "chat" = Simple Chat Message
+Config.Notify = "qb" --"qb" = Default (QBCore) | "okok" = OkOkNotify | "mythic" = Mythic Notifications | "tnj" = tnj-notify | "chat" = Simple Chat Message
 Config.Notifications = {
     -- Success's
     ["SlushyGive"] = "You\'ve poured a Slushy!",

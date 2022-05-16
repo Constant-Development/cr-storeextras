@@ -6,7 +6,7 @@ local icecream = Config.IceCreamProp
 local gumballstand = Config.BubbleGumStandProp
 
 function StoreExtraNotifications(notifType, message, title)
-	if Config.Notify == 'qb' then
+	if Config.Notify == "qb" then
 		if notifType == 1 then
 			QBCore.Functions.Notify(message, 'success')
 		elseif notifType == 2 then
@@ -30,7 +30,15 @@ function StoreExtraNotifications(notifType, message, title)
 		elseif notifType == 3 then
 			exports['mythic_notify']:DoHudText('error', message)
 		end
-	elseif Config.Notify == 'chat' then
+    elseif Config.Notify == "tnj" then
+        if notifType == 1 then
+            exports['tnj-notify']:Notify(message, 'success', 3000)
+		elseif notifType == 2 then
+            exports['tnj-notify']:Notify(message, 'primary', 3000)
+		elseif notifType == 3 then
+            exports['tnj-notify']:Notify(message, 'error', 3000)
+		end
+	elseif Config.Notify == "chat" then
 		TriggerEvent('chatMessage', message)
 	end
 end
