@@ -23,6 +23,8 @@
 
 # How To Install
 
+* If you encounter any issues whilst Installing or Using/Enforcing this Resource, please feel free to Open a Ticket within the [Constant Development Discord](https://discord.gg/gSQbshCNv4).
+
 ## Step One
 * Place the following snippet inside of qb-core/shared/items.lua
 ```
