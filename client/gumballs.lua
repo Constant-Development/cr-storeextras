@@ -5,9 +5,9 @@ AddEventHandler('cr-storeextras:client:BubbleGumStand', function()
     local ped = PlayerPedId()
     QBCore.Functions.TriggerCallback('cr-storeextras:server:GumBallStandCooldown', function(result)
         if not result then
-            if Config.Minigame == true then
-                local seconds = math.random(5,10)
-                local circles = math.random(3,5)
+            if Config.Minigame == 'qb-lock' then
+                local seconds = math.random(5, 10)
+                local circles = math.random(3, 5)
                 local success = exports['qb-lock']:StartLockPickCircle(circles, seconds)
                 if success then
                     if Config.InteractSound == true then
@@ -29,10 +29,65 @@ AddEventHandler('cr-storeextras:client:BubbleGumStand', function()
                         StoreExtraNotifications(3, Config.Notifications["ProgressbarCancelled"], Config.Notifications["okok_Title"])
                     end)
                 else
-                ClearPedTasks(PlayerPedId())
-                StoreExtraNotifications(3, Config.Notifications["BubbleGumStandFail"], Config.Notifications["okok_Title"])
+                    ClearPedTasks(PlayerPedId())
+                    StoreExtraNotifications(3, Config.Notifications["BubbleGumStandFail"], Config.Notifications["okok_Title"])
                 end
-            else
+            elseif Config.Minigame == 'ps-ui' then
+                exports['ps-ui']:Circle(function(success)
+                    if success then
+                        if Config.InteractSound == true then
+                            TriggerServerEvent("InteractSound_SV:PlayOnSource", "bubblegumstand", 0.3)
+                        end
+                        TaskStartScenarioInPlace(ped, "WORLD_HUMAN_HANG_OUT_STREET", 0, true) -- Change Emote
+                        QBCore.Functions.Progressbar("bubblegum", "Waiting on a Gumball...", 10000, false, true, {
+                            disableMovement = true,
+                            disableCarMovement = true,
+                            disableMouse = false,
+                            disableCombat = true,
+                        }, {}, {}, {}, function()
+                            StoreExtraNotifications(1, Config.Notifications["BubbleGumGive"], Config.Notifications["okok_Title"])
+                            ClearPedTasks(PlayerPedId())
+                            TriggerServerEvent('cr-storeextras:server:GiveBubbleGum')
+                            TriggerServerEvent('cr-storeextras:server:SetGumballStandCooldown')
+                        end, function()
+                            ClearPedTasks(PlayerPedId())
+                            StoreExtraNotifications(3, Config.Notifications["ProgressbarCancelled"], Config.Notifications["okok_Title"])
+                        end)
+                    else
+                        ClearPedTasks(PlayerPedId())
+                        StoreExtraNotifications(3, Config.Notifications["BubbleGumStandFail"], Config.Notifications["okok_Title"])
+                    end
+                end, math.random(3, 5), math.random(5, 10))
+            elseif Config.Minigame == 'qb-skillbar' then
+                local Skillbar = exports['qb-skillbar']:GetSkillbarObject()
+                Skillbar.Start({
+                    duration = math.random(1000, 2000),
+                    pos = math.random(10, 30),
+                    width = math.random(10, 20),
+                }, function()
+                    if Config.InteractSound == true then
+                        TriggerServerEvent("InteractSound_SV:PlayOnSource", "bubblegumstand", 0.3)
+                    end
+                    TaskStartScenarioInPlace(ped, "WORLD_HUMAN_HANG_OUT_STREET", 0, true) -- Change Emote
+                    QBCore.Functions.Progressbar("bubblegum", "Waiting on a Gumball...", 10000, false, true, {
+                        disableMovement = true,
+                        disableCarMovement = true,
+                        disableMouse = false,
+                        disableCombat = true,
+                    }, {}, {}, {}, function()
+                        StoreExtraNotifications(1, Config.Notifications["BubbleGumGive"], Config.Notifications["okok_Title"])
+                        ClearPedTasks(PlayerPedId())
+                        TriggerServerEvent('cr-storeextras:server:GiveBubbleGum')
+                        TriggerServerEvent('cr-storeextras:server:SetGumballStandCooldown')
+                    end, function()
+                        ClearPedTasks(PlayerPedId())
+                        StoreExtraNotifications(3, Config.Notifications["ProgressbarCancelled"], Config.Notifications["okok_Title"])
+                    end)
+                end, function()
+                    ClearPedTasks(PlayerPedId())
+                    StoreExtraNotifications(3, Config.Notifications["BubbleGumStandFail"], Config.Notifications["okok_Title"])
+                end)
+            elseif Config.Minigame == false then
                 if Config.InteractSound == true then
                     TriggerServerEvent("InteractSound_SV:PlayOnSource", "bubblegumstand", 0.3)
                 end

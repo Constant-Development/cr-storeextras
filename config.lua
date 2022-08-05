@@ -1,8 +1,10 @@
 Config = {}
 
-Config.Minigame = true
- -- true = Minigame Enabled(qb-lock)
- -- false = Minigame Disabled(qb-lock)
+Config.Minigame = 'qb-lock'
+ -- 'qb-lock' = Minigame Enabled(QBCore Lock - NP Inspired)
+ -- 'qb-skillbar' = Minigame Enabled(QBCore Skillbar)
+ -- 'ps-ui' = Minigame Enabled(PS UI Lock Minigame)
+ -- false = Minigame Disabled
 Config.InteractSound = false
  -- true = Machine Sounds Enabled
  -- false = Machine Sounds Disabled
