@@ -3,6 +3,7 @@
 # Developed By Constant Development
 
 [Constant Development Discord](https://discord.gg/gSQbshCNv4)
+[Constant Development Tebex](https://constant-development.tebex.io/)
 
 ## Dependencies
 - [qb-target](https://github.com/Renewed-Scripts/qb-target)
