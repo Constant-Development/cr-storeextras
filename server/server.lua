@@ -85,7 +85,7 @@ end)
 RegisterNetEvent('cr-storeextras:server:GiveBubbleGum', function()
     local src = source
     local Player = QBCore.Functions.GetPlayer(src)
-    local BubbleGum = math.random(1,52)
+    local BubbleGum = math.random(1, 52)
     if BubbleGum >= 1 then
         Player.Functions.AddItem("bubblegum_gumball", 1, false)
         TriggerClientEvent('inventory:client:ItemBox', src, QBCore.Shared.Items["bubblegum_gumball"], "add")
@@ -109,7 +109,7 @@ end)
 RegisterNetEvent('cr-storeextras:server:SetSlushyCooldown')
 AddEventHandler('cr-storeextras:server:SetSlushyCooldown', function()
     isSlushyCoolDownActive = true
-    Wait((Config.SlushyCooldownTime * 1000) * 60)
+    Wait((Config.Cooldowns.SlushyCooldownTime * 1000) * 60)
     isSlushyCoolDownActive = false
 end)
 
@@ -124,7 +124,7 @@ end)
 RegisterNetEvent('cr-storeextras:server:SetSluckyBuckyDonutCooldown')
 AddEventHandler('cr-storeextras:server:SetSluckyBuckyDonutCooldown', function()
     isSluckyBuckyDonutCoolDownActive = true
-    Wait((Config.SluckyBuckyDonutCooldownTime * 1000) * 60)
+    Wait((Config.Cooldowns.SluckyBuckyDonutCooldownTime * 1000) * 60)
     isSluckyBuckyDonutCoolDownActive = false
 end)
 
@@ -139,7 +139,7 @@ end)
 RegisterNetEvent('cr-storeextras:server:SetIceCreamCooldown')
 AddEventHandler('cr-storeextras:server:SetIceCreamCooldown', function()
     isIceCreamCoolDownActive = true
-    Wait((Config.SluckyBuckyDonutCooldownTime * 1000) * 60)
+    Wait((Config.Cooldowns.IceCreamCooldownTime * 1000) * 60)
     isIceCreamCoolDownActive = false
 end)
 
@@ -154,7 +154,7 @@ end)
 RegisterNetEvent('cr-storeextras:server:SetGumballStandCooldown')
 AddEventHandler('cr-storeextras:server:SetGumballStandCooldown', function()
     isGumballStandCoolDownActive = true
-    Wait((Config.GumballStandCooldownTime * 1000) * 60)
+    Wait((Config.Cooldowns.GumballStandCooldownTime * 1000) * 60)
     isGumballStandCoolDownActive = false
 end)
 

@@ -1,5 +1,13 @@
 Config = {}
 
+Config.Framework = {
+
+    Target = 'qb-target',
+    -- 'qb-target' = QBCore Target
+    -- 'qtarget' = QTarget
+
+}
+
 Config.Minigame = 'qb-lock'
  -- 'qb-lock' = Minigame Enabled(QBCore Lock - NP Inspired)
  -- 'qb-skillbar' = Minigame Enabled(QBCore Skillbar)
@@ -9,56 +17,63 @@ Config.InteractSound = false
  -- true = Machine Sounds Enabled
  -- false = Machine Sounds Disabled
 
-Config.SlushyProp = {
-    "prop_slush_dispenser",
-    "prop_juice_dispenser",
+Config.Cooldowns = {
+
+    Cooldown = true,
+    -- true = Cooldowns Active
+    -- false = Cooldowns Disabled
+
+    SlushyCooldownTime = 5, -- Time is in Minutes
+    SluckyBuckyDonutCooldownTime = 5, -- Time is in Minutes
+    IceCreamCooldownTime = 5, -- Time is in Minutes
+    GumballStandCooldownTime = 5 -- Time is in Minutes
 }
 
-Config.DonutProp = {
-    "v_ret_247_donuts",
+Config.Props = {
+
+    SlushyProp = {
+        "prop_slush_dispenser",
+        "prop_juice_dispenser",
+    },
+
+    DonutProp = {
+        "v_ret_247_donuts",
+    },
+
+    IceCreamProp = {
+        "", -- Unkown
+    },
+
+    BubbleGumStandProp = {
+        "prop_gumball_03",
+    }
 }
 
-Config.IceCreamProp = {
-    "", -- Unkown LOL
-}
+Config.Prices = {
 
-Config.BubbleGumStandProp = {
-    "prop_gumball_03",
-}
-
-Config.Cooldowns = true
- -- true = Cooldowns Active
- -- false = Cooldowns Disabled
-Config.SlushyCooldownTime = 5 -- Time is in Minutes
-Config.SluckyBuckyDonutCooldownTime = 5 -- Time is in Minutes
-Config.GumballStandCooldownTime = 5 -- Time is in Minutes
-
-Config.SlushyCost = {
     RedSlushy = 3,
     GreenSlushy = 3,
     OrangeSlushy = 3,
     YellowSlushy = 3,
     BlueSlushy = 3,
     RainbowSlushy = 3,
-}
 
-Config.SluckyBuckyDonutCost = 8
+    SluckyBuckyDonut = 8,
 
-Config.IceCreamCost = {
     VanillaIceCream = 6,
     ChocolateIceCream = 6,
     MintIceCream = 6,
     CookiesAndCreamIceCream = 6,
-}
 
-Config.GumBallCost = 1
+    GumBall = 1
+}
 
 Config.BubbleGumStandFailChance = true
  -- True = Chance for GumBall Stand to not give GumBall
  -- False = Chance Disabled
 
 --Notification Settings
-Config.Notify = "qb" --"qb" = Default (QBCore) | "okok" = OkOkNotify | "mythic" = Mythic Notifications | "tnj" = tnj-notify | "chat" = Simple Chat Message
+Config.Notify = "qb" -- "qb" = Default (QBCore) | "okok" = OkOkNotify | "mythic" = Mythic Notifications | "tnj" = tnj-notify | "chat" = Simple Chat Message
 Config.Notifications = {
     -- Success's
     ["SlushyGive"] = "You\'ve poured a Slushy!",

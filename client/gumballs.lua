@@ -23,7 +23,9 @@ AddEventHandler('cr-storeextras:client:BubbleGumStand', function()
                         StoreExtraNotifications(1, Config.Notifications["BubbleGumGive"], Config.Notifications["okok_Title"])
                         ClearPedTasks(PlayerPedId())
                         TriggerServerEvent('cr-storeextras:server:GiveBubbleGum')
-                        TriggerServerEvent('cr-storeextras:server:SetGumballStandCooldown')
+                        if Config.Cooldowns.Cooldown == true then
+                            TriggerServerEvent('cr-storeextras:server:SetGumballStandCooldown')
+                        end
                     end, function()
                         ClearPedTasks(PlayerPedId())
                         StoreExtraNotifications(3, Config.Notifications["ProgressbarCancelled"], Config.Notifications["okok_Title"])
@@ -48,7 +50,9 @@ AddEventHandler('cr-storeextras:client:BubbleGumStand', function()
                             StoreExtraNotifications(1, Config.Notifications["BubbleGumGive"], Config.Notifications["okok_Title"])
                             ClearPedTasks(PlayerPedId())
                             TriggerServerEvent('cr-storeextras:server:GiveBubbleGum')
-                            TriggerServerEvent('cr-storeextras:server:SetGumballStandCooldown')
+                            if Config.Cooldowns.Cooldown == true then
+                                TriggerServerEvent('cr-storeextras:server:SetGumballStandCooldown')
+                            end
                         end, function()
                             ClearPedTasks(PlayerPedId())
                             StoreExtraNotifications(3, Config.Notifications["ProgressbarCancelled"], Config.Notifications["okok_Title"])
@@ -78,7 +82,9 @@ AddEventHandler('cr-storeextras:client:BubbleGumStand', function()
                         StoreExtraNotifications(1, Config.Notifications["BubbleGumGive"], Config.Notifications["okok_Title"])
                         ClearPedTasks(PlayerPedId())
                         TriggerServerEvent('cr-storeextras:server:GiveBubbleGum')
-                        TriggerServerEvent('cr-storeextras:server:SetGumballStandCooldown')
+                        if Config.Cooldowns.Cooldown == true then
+                            TriggerServerEvent('cr-storeextras:server:SetGumballStandCooldown')
+                        end
                     end, function()
                         ClearPedTasks(PlayerPedId())
                         StoreExtraNotifications(3, Config.Notifications["ProgressbarCancelled"], Config.Notifications["okok_Title"])
@@ -101,7 +107,9 @@ AddEventHandler('cr-storeextras:client:BubbleGumStand', function()
                     StoreExtraNotifications(1, Config.Notifications["BubbleGumGive"], Config.Notifications["okok_Title"])
                     ClearPedTasks(PlayerPedId())
                     TriggerServerEvent('cr-storeextras:server:GiveBubbleGum')
-                    TriggerServerEvent('cr-storeextras:server:SetGumballStandCooldown')
+                    if Config.Cooldowns.Cooldown == true then
+                        TriggerServerEvent('cr-storeextras:server:SetGumballStandCooldown')
+                    end
                 end, function()
                     ClearPedTasks(PlayerPedId())
                     StoreExtraNotifications(3, Config.Notifications["ProgressbarCancelled"], Config.Notifications["okok_Title"])
