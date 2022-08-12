@@ -9,6 +9,7 @@ RegisterNetEvent('cr-storeextras:server:GiveYellowSlushy', function()
     local src = source
     local Player = QBCore.Functions.GetPlayer(src)
     Player.Functions.AddItem("yellowslushy", 1, false)
+    Player.Functions.RemoveMoney('cash', Config.Prices.YellowSlushy)
     TriggerClientEvent('inventory:client:ItemBox', src, QBCore.Shared.Items["yellowslushy"], "add")
 end)
 
@@ -16,6 +17,7 @@ RegisterNetEvent('cr-storeextras:server:GiveOrangeSlushy', function()
     local src = source
     local Player = QBCore.Functions.GetPlayer(src)
     Player.Functions.AddItem("orangeslushy", 1, false)
+    Player.Functions.RemoveMoney('cash', Config.Prices.OrangeSlushy)
     TriggerClientEvent('inventory:client:ItemBox', src, QBCore.Shared.Items["orangeslushy"], "add")
 end)
 
@@ -23,6 +25,7 @@ RegisterNetEvent('cr-storeextras:server:GiveBlueSlushy', function()
     local src = source
     local Player = QBCore.Functions.GetPlayer(src)
     Player.Functions.AddItem("blueslushy", 1, false)
+    Player.Functions.RemoveMoney('cash', Config.Prices.BlueSlushy)
     TriggerClientEvent('inventory:client:ItemBox', src, QBCore.Shared.Items["blueslushy"], "add")
 end)
 
@@ -30,6 +33,7 @@ RegisterNetEvent('cr-storeextras:server:GiveRainbowSlushy', function()
     local src = source
     local Player = QBCore.Functions.GetPlayer(src)
     Player.Functions.AddItem("rainbowslushy", 1, false)
+    Player.Functions.RemoveMoney('cash', Config.Prices.RainbowSlushy)
     TriggerClientEvent('inventory:client:ItemBox', src, QBCore.Shared.Items["rainbowslushy"], "add")
 end)
 
@@ -37,6 +41,7 @@ RegisterNetEvent('cr-storeextras:server:GiveRedSlushy', function()
     local src = source
     local Player = QBCore.Functions.GetPlayer(src)
     Player.Functions.AddItem("redslushy", 1, false)
+    Player.Functions.RemoveMoney('cash', Config.Prices.RedSlushy)
     TriggerClientEvent('inventory:client:ItemBox', src, QBCore.Shared.Items["redslushy"], "add")
 end)
 
@@ -44,6 +49,7 @@ RegisterNetEvent('cr-storeextras:server:GiveGreenSlushy', function()
     local src = source
     local Player = QBCore.Functions.GetPlayer(src)
     Player.Functions.AddItem("greenslushy", 1, false)
+    Player.Functions.RemoveMoney('cash', Config.Prices.GreenSlushy)
     TriggerClientEvent('inventory:client:ItemBox', src, QBCore.Shared.Items["greenslushy"], "add")
 end)
 
@@ -51,6 +57,7 @@ RegisterNetEvent('cr-storeextras:server:GiveSluckyDonut', function()
     local src = source
     local Player = QBCore.Functions.GetPlayer(src)
     Player.Functions.AddItem("superdonut", 1, false)
+    Player.Functions.RemoveMoney('cash', Config.Prices.SluckyBuckyDonut)
     TriggerClientEvent('inventory:client:ItemBox', src, QBCore.Shared.Items["superdonut"], "add")
 end)
 
@@ -58,6 +65,7 @@ RegisterNetEvent('cr-storeextras:server:GiveVanillaIceCream', function()
     local src = source
     local Player = QBCore.Functions.GetPlayer(src)
     Player.Functions.AddItem("vanillaicecream", 1, false)
+    Player.Functions.RemoveMoney('cash', Config.Prices.VanillaIceCream)
     TriggerClientEvent('inventory:client:ItemBox', src, QBCore.Shared.Items["vanillaicecream"], "add")
 end)
 
@@ -65,6 +73,7 @@ RegisterNetEvent('cr-storeextras:server:GiveChocolateIceCream', function()
     local src = source
     local Player = QBCore.Functions.GetPlayer(src)
     Player.Functions.AddItem("chocolateicecream", 1, false)
+    Player.Functions.RemoveMoney('cash', Config.Prices.ChocolateIceCream)
     TriggerClientEvent('inventory:client:ItemBox', src, QBCore.Shared.Items["chocolateicecream"], "add")
 end)
 
@@ -72,6 +81,7 @@ RegisterNetEvent('cr-storeextras:server:GiveMintIceCream', function()
     local src = source
     local Player = QBCore.Functions.GetPlayer(src)
     Player.Functions.AddItem("minticecream", 1, false)
+    Player.Functions.RemoveMoney('cash', Config.Prices.MintIceCream)
     TriggerClientEvent('inventory:client:ItemBox', src, QBCore.Shared.Items["minticecream"], "add")
 end)
 
@@ -79,6 +89,7 @@ RegisterNetEvent('cr-storeextras:server:GiveCookiesAndCreamIceCream', function()
     local src = source
     local Player = QBCore.Functions.GetPlayer(src)
     Player.Functions.AddItem("cookiesandcreamicecream", 1, false)
+    Player.Functions.RemoveMoney('cash', Config.Prices.CookiesAndCreamIceCream)
     TriggerClientEvent('inventory:client:ItemBox', src, QBCore.Shared.Items["cookiesandcreamicecream"], "add")
 end)
 
@@ -104,6 +115,7 @@ RegisterNetEvent('cr-storeextras:server:GiveBubbleGum', function()
     elseif BubbleGum >= 51 then
         TriggerClientEvent('cr-storeextras:client:BubbleGumStandFail')
     end
+    Player.Functions.RemoveMoney('cash', Config.Prices.GumBall)
 end)
 
 RegisterNetEvent('cr-storeextras:server:SetSlushyCooldown')

@@ -51,43 +51,37 @@ Citizen.CreateThread(function()
                     type = "client",
                     event = "cr-storeextras:client:RedSlushy",
                     icon = "fas fa-wine-bottle",
-                    label = "Pour Red Slushy",
-                    price = Config.Prices.RedSlushy,
+                    label = "Pour Red Slushy"
                 },
                 {
                     type = "client",
                     event = "cr-storeextras:client:GreenSlushy",
                     icon = "fas fa-wine-bottle",
-                    label = "Pour Green Slushy",
-                    price = Config.Prices.GreenSlushy,
+                    label = "Pour Green Slushy"
                 },
                 {
                     type = "client",
                     event = "cr-storeextras:client:OrangeSlushy",
                     icon = "fas fa-wine-bottle",
-                    label = "Pour Orange Slushy",
-                    price = Config.Prices.OrangeSlushy,
+                    label = "Pour Orange Slushy"
                 },
                 {
                     type = "client",
                     event = "cr-storeextras:client:YellowSlushy",
                     icon = "fas fa-wine-bottle",
-                    label = "Pour Yellow Slushy",
-                    price = Config.Prices.YellowSlushy,
+                    label = "Pour Yellow Slushy"
                 },
                 {
                     type = "client",
                     event = "cr-storeextras:client:BlueSlushy",
                     icon = "fas fa-wine-bottle",
-                    label = "Pour Blue Slushy",
-                    price = Config.Prices.BlueSlushy,
+                    label = "Pour Blue Slushy"
                 },
                 {
                     type = "client",
                     event = "cr-storeextras:client:RainbowSlushy",
                     icon = "fas fa-wine-bottle",
-                    label = "Pour Rainbow Slushy",
-                    price = Config.Prices.RainbowSlushy,
+                    label = "Pour Rainbow Slushy"
                 },
             },
             distance = 1.5
@@ -98,8 +92,7 @@ Citizen.CreateThread(function()
                     type = "client",
                     event = "cr-storeextras:client:SluckyBuckyDonut",
                     icon = "fas fa-hand-holding",
-                    label = "Grab Slucky Bucky Donut",
-                    price = Config.Prices.SluckyBuckyDonut,
+                    label = "Grab Slucky Bucky Donut"
                 },
             },
             distance = 1.5
@@ -110,29 +103,25 @@ Citizen.CreateThread(function()
                     type = "client",
                     event = "cr-storeextras:client:VanillaIceCream",
                     icon = "fas fa-ice-cream",
-                    label = "Scoop Vanilla Ice Cream",
-                    price = Config.Prices.VanillaIceCream,
+                    label = "Scoop Vanilla Ice Cream"
                 },
                 {
                     type = "client",
                     event = "cr-storeextras:client:ChocolateIceCream",
                     icon = "fas fa-ice-cream",
-                    label = "Scoop Chocolate Ice Cream",
-                    price = Config.Prices.ChocolateIceCream,
+                    label = "Scoop Chocolate Ice Cream"
                 },
                 {
                     type = "client",
                     event = "cr-storeextras:client:MintIceCream",
                     icon = "fas fa-ice-cream",
-                    label = "Scoop Mint Ice Cream",
-                    price = Config.Prices.MintIceCream,
+                    label = "Scoop Mint Ice Cream"
                 },
                 {
                     type = "client",
                     event = "cr-storeextras:client:CookiesAndCreamIceCream",
                     icon = "fas fa-ice-cream",
-                    label = "Scoop Cookies & Cream Ice Cream",
-                    price = Config.Prices.CookiesAndCreamIceCream,
+                    label = "Scoop Cookies & Cream Ice Cream"
                 },
             },
             distance = 1.5
@@ -143,8 +132,7 @@ Citizen.CreateThread(function()
                     type = "client",
                     event = "cr-storeextras:client:BubbleGumStand",
                     icon = "fas fa-coin",
-                    label = "Grab GumBall",
-                    price = Config.Prices.GumBall,
+                    label = "Grab GumBall"
                 },
             },
             distance = 1.5
@@ -156,43 +144,37 @@ Citizen.CreateThread(function()
                     type = "client",
                     event = "cr-storeextras:client:RedSlushy",
                     icon = "fas fa-wine-bottle",
-                    label = "Pour Red Slushy",
-                    price = Config.SlushyCost.RedSlushy,
+                    label = "Pour Red Slushy"
                 },
                 {
                     type = "client",
                     event = "cr-storeextras:client:GreenSlushy",
                     icon = "fas fa-wine-bottle",
-                    label = "Pour Green Slushy",
-                    price = Config.SlushyCost.GreenSlushy,
+                    label = "Pour Green Slushy"
                 },
                 {
                     type = "client",
                     event = "cr-storeextras:client:OrangeSlushy",
                     icon = "fas fa-wine-bottle",
-                    label = "Pour Orange Slushy",
-                    price = Config.SlushyCost.OrangeSlushy,
+                    label = "Pour Orange Slushy"
                 },
                 {
                     type = "client",
                     event = "cr-storeextras:client:YellowSlushy",
                     icon = "fas fa-wine-bottle",
-                    label = "Pour Yellow Slushy",
-                    price = Config.SlushyCost.YellowSlushy,
+                    label = "Pour Yellow Slushy"
                 },
                 {
                     type = "client",
                     event = "cr-storeextras:client:BlueSlushy",
                     icon = "fas fa-wine-bottle",
-                    label = "Pour Blue Slushy",
-                    price = Config.SlushyCost.BlueSlushy,
+                    label = "Pour Blue Slushy"
                 },
                 {
                     type = "client",
                     event = "cr-storeextras:client:RainbowSlushy",
                     icon = "fas fa-wine-bottle",
-                    label = "Pour Rainbow Slushy",
-                    price = Config.SlushyCost.RainbowSlushy,
+                    label = "Pour Rainbow Slushy"
                 },
             },
             distance = 1.5
@@ -203,8 +185,7 @@ Citizen.CreateThread(function()
                     type = "client",
                     event = "cr-storeextras:client:SluckyBuckyDonut",
                     icon = "fas fa-hand-holding",
-                    label = "Grab Slucky Bucky Donut",
-                    price = Config.SluckyBuckyDonutCost,
+                    label = "Grab Slucky Bucky Donut"
                 },
             },
             distance = 1.5
@@ -215,29 +196,25 @@ Citizen.CreateThread(function()
                     type = "client",
                     event = "cr-storeextras:client:VanillaIceCream",
                     icon = "fas fa-ice-cream",
-                    label = "Scoop Vanilla Ice Cream",
-                    price = Config.IceCreamCost.VanillaIceCream,
+                    label = "Scoop Vanilla Ice Cream"
                 },
                 {
                     type = "client",
                     event = "cr-storeextras:client:ChocolateIceCream",
                     icon = "fas fa-ice-cream",
-                    label = "Scoop Chocolate Ice Cream",
-                    price = Config.IceCreamCost.ChocolateIceCream,
+                    label = "Scoop Chocolate Ice Cream"
                 },
                 {
                     type = "client",
                     event = "cr-storeextras:client:MintIceCream",
                     icon = "fas fa-ice-cream",
-                    label = "Scoop Mint Ice Cream",
-                    price = Config.IceCreamCost.MintIceCream,
+                    label = "Scoop Mint Ice Cream"
                 },
                 {
                     type = "client",
                     event = "cr-storeextras:client:CookiesAndCreamIceCream",
                     icon = "fas fa-ice-cream",
-                    label = "Scoop Cookies & Cream Ice Cream",
-                    price = Config.IceCreamCost.CookiesAndCreamIceCream,
+                    label = "Scoop Cookies & Cream Ice Cream"
                 },
             },
             distance = 1.5
@@ -248,8 +225,7 @@ Citizen.CreateThread(function()
                     type = "client",
                     event = "cr-storeextras:client:BubbleGumStand",
                     icon = "fas fa-coin",
-                    label = "Grab GumBall",
-                    price = Config.GumBallCost,
+                    label = "Grab GumBall"
                 },
             },
             distance = 1.5
