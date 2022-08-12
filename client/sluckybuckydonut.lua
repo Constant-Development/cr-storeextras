@@ -5,12 +5,12 @@ AddEventHandler('cr-storeextras:client:SluckyBuckyDonut', function()
     local ped = PlayerPedId()
     QBCore.Functions.TriggerCallback('cr-storeextras:server:SluckyBuckyDonutCooldown', function(result)
         if not result then
-            if Config.Minigame == 'qb-lock' then
+            if Config.Framework.Minigame == 'qb-lock' then
                 local seconds = math.random(2, 4)
                 local circles = math.random(12, 18)
                 local success = exports['qb-lock']:StartLockPickCircle(circles, seconds)
                 if success then
-                    if Config.InteractSound == true then
+                    if Config.Framework.InteractSound == true then
                         TriggerServerEvent("InteractSound_SV:PlayOnSource", "deepfried", 0.3)
                     end
                     TaskStartScenarioInPlace(ped, "WORLD_HUMAN_HANG_OUT_STREET", 0, true)
@@ -34,10 +34,10 @@ AddEventHandler('cr-storeextras:client:SluckyBuckyDonut', function()
                     ClearPedTasks(PlayerPedId())
                     StoreExtraNotifications(3, Config.Notifications["SluckyBuckyDonutMinigameFail"], Config.Notifications["okok_Title"])
                 end
-            elseif Config.Minigame == 'ps-ui' then
+            elseif Config.Framework.Minigame == 'ps-ui' then
                 exports['ps-ui']:Circle(function(success)
                     if success then
-                        if Config.InteractSound == true then
+                        if Config.Framework.InteractSound == true then
                             TriggerServerEvent("InteractSound_SV:PlayOnSource", "deepfried", 0.3)
                         end
                         TaskStartScenarioInPlace(ped, "WORLD_HUMAN_HANG_OUT_STREET", 0, true)
@@ -62,14 +62,14 @@ AddEventHandler('cr-storeextras:client:SluckyBuckyDonut', function()
                         StoreExtraNotifications(3, Config.Notifications["SluckyBuckyDonutMinigameFail"], Config.Notifications["okok_Title"])
                     end
                 end, math.random(12, 18), math.random(2, 4))
-            elseif Config.Minigame == 'qb-skillbar' then
+            elseif Config.Framework.Minigame == 'qb-skillbar' then
                 local Skillbar = exports['qb-skillbar']:GetSkillbarObject()
                 Skillbar.Start({
                     duration = math.random(250, 1000),
                     pos = math.random(10, 30),
                     width = math.random(10, 20),
                 }, function()
-                    if Config.InteractSound == true then
+                    if Config.Framework.InteractSound == true then
                         TriggerServerEvent("InteractSound_SV:PlayOnSource", "deepfried", 0.3)
                     end
                     TaskStartScenarioInPlace(ped, "WORLD_HUMAN_HANG_OUT_STREET", 0, true)
@@ -93,8 +93,8 @@ AddEventHandler('cr-storeextras:client:SluckyBuckyDonut', function()
                     ClearPedTasks(PlayerPedId())
                     StoreExtraNotifications(3, Config.Notifications["SluckyBuckyDonutMinigameFail"], Config.Notifications["okok_Title"])
                 end)
-            elseif Config.Minigame == false then
-                if Config.InteractSound == true then
+            elseif Config.Framework.Minigame == false then
+                if Config.Framework.InteractSound == true then
                     TriggerServerEvent("InteractSound_SV:PlayOnSource", "deepfried", 0.3)
                 end
                 TaskStartScenarioInPlace(ped, "WORLD_HUMAN_HANG_OUT_STREET", 0, true)

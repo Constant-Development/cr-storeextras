@@ -5,12 +5,12 @@ AddEventHandler('cr-storeextras:client:RedSlushy', function()
     local ped = PlayerPedId()
     QBCore.Functions.TriggerCallback('cr-storeextras:server:SlushyCooldown', function(result)
         if not result then
-            if Config.Minigame == 'qb-lock' then
+            if Config.Framework.Minigame == 'qb-lock' then
                 local seconds = math.random(10, 12)
                 local circles = math.random(4, 8)
                 local success = exports['qb-lock']:StartLockPickCircle(circles, seconds)
                 if success then
-                    if Config.InteractSound == true then
+                    if Config.Framework.InteractSound == true then
                         TriggerServerEvent("InteractSound_SV:PlayOnSource", "pour-slushy", 0.3)
                     end
                     TaskStartScenarioInPlace(ped, "WORLD_HUMAN_HANG_OUT_STREET", 0, true)
@@ -34,10 +34,10 @@ AddEventHandler('cr-storeextras:client:RedSlushy', function()
                     ClearPedTasks(PlayerPedId())
                     StoreExtraNotifications(3, Config.Notifications["SlushyMinigameFail"], Config.Notifications["okok_Title"])
                 end
-            elseif Config.Minigame == 'ps-ui' then
+            elseif Config.Framework.Minigame == 'ps-ui' then
                 exports['ps-ui']:Circle(function(success)
                     if success then
-                        if Config.InteractSound == true then
+                        if Config.Framework.InteractSound == true then
                             TriggerServerEvent("InteractSound_SV:PlayOnSource", "pour-slushy", 0.3)
                         end
                         TaskStartScenarioInPlace(ped, "WORLD_HUMAN_HANG_OUT_STREET", 0, true)
@@ -62,14 +62,14 @@ AddEventHandler('cr-storeextras:client:RedSlushy', function()
                         StoreExtraNotifications(3, Config.Notifications["SlushyMinigameFail"], Config.Notifications["okok_Title"])
                     end
                 end, math.random(4, 8), math.random(10, 12))
-            elseif Config.Minigame == 'qb-skillbar' then
+            elseif Config.Framework.Minigame == 'qb-skillbar' then
                 local Skillbar = exports['qb-skillbar']:GetSkillbarObject()
                 Skillbar.Start({
                     duration = math.random(3500, 5000),
                     pos = math.random(10, 30),
                     width = math.random(10, 20),
                 }, function()
-                    if Config.InteractSound == true then
+                    if Config.Framework.InteractSound == true then
                         TriggerServerEvent("InteractSound_SV:PlayOnSource", "pour-slushy", 0.3)
                     end
                     TaskStartScenarioInPlace(ped, "WORLD_HUMAN_HANG_OUT_STREET", 0, true)
@@ -93,8 +93,8 @@ AddEventHandler('cr-storeextras:client:RedSlushy', function()
                     ClearPedTasks(PlayerPedId())
                     StoreExtraNotifications(3, Config.Notifications["SlushyMinigameFail"], Config.Notifications["okok_Title"])
                 end)
-            elseif Config.Minigame == false then
-                if Config.InteractSound == true then
+            elseif Config.Framework.Minigame == false then
+                if Config.Framework.InteractSound == true then
                     TriggerServerEvent("InteractSound_SV:PlayOnSource", "pour-slushy", 0.3)
                 end
                 TaskStartScenarioInPlace(ped, "WORLD_HUMAN_HANG_OUT_STREET", 0, true)
@@ -126,12 +126,12 @@ AddEventHandler('cr-storeextras:client:GreenSlushy', function()
     local ped = PlayerPedId()
     QBCore.Functions.TriggerCallback('cr-storeextras:server:SlushyCooldown', function(result)
         if not result then
-            if Config.Minigame == 'qb-lock' then
+            if Config.Framework.Minigame == 'qb-lock' then
                 local seconds = math.random(10, 12)
                 local circles = math.random(4, 8)
                 local success = exports['qb-lock']:StartLockPickCircle(circles, seconds)
                 if success then
-                    if Config.InteractSound == true then
+                    if Config.Framework.InteractSound == true then
                         TriggerServerEvent("InteractSound_SV:PlayOnSource", "pour-slushy", 0.3)
                     end
                     TaskStartScenarioInPlace(ped, "WORLD_HUMAN_HANG_OUT_STREET", 0, true)
@@ -155,10 +155,10 @@ AddEventHandler('cr-storeextras:client:GreenSlushy', function()
                     ClearPedTasks(PlayerPedId())
                     StoreExtraNotifications(3, Config.Notifications["SlushyMinigameFail"], Config.Notifications["okok_Title"])
                 end
-            elseif Config.Minigame == 'ps-ui' then
+            elseif Config.Framework.Minigame == 'ps-ui' then
                 exports['ps-ui']:Circle(function(success)
                     if success then
-                        if Config.InteractSound == true then
+                        if Config.Framework.InteractSound == true then
                             TriggerServerEvent("InteractSound_SV:PlayOnSource", "pour-slushy", 0.3)
                         end
                         TaskStartScenarioInPlace(ped, "WORLD_HUMAN_HANG_OUT_STREET", 0, true)
@@ -183,14 +183,14 @@ AddEventHandler('cr-storeextras:client:GreenSlushy', function()
                         StoreExtraNotifications(3, Config.Notifications["SlushyMinigameFail"], Config.Notifications["okok_Title"])
                     end
                 end, math.random(4, 8), math.random(10, 12))
-            elseif Config.Minigame == 'qb-skillbar' then
+            elseif Config.Framework.Minigame == 'qb-skillbar' then
                 local Skillbar = exports['qb-skillbar']:GetSkillbarObject()
                 Skillbar.Start({
                     duration = math.random(3500, 5000),
                     pos = math.random(10, 30),
                     width = math.random(10, 20),
                 }, function()
-                    if Config.InteractSound == true then
+                    if Config.Framework.InteractSound == true then
                         TriggerServerEvent("InteractSound_SV:PlayOnSource", "pour-slushy", 0.3)
                     end
                     TaskStartScenarioInPlace(ped, "WORLD_HUMAN_HANG_OUT_STREET", 0, true)
@@ -214,8 +214,8 @@ AddEventHandler('cr-storeextras:client:GreenSlushy', function()
                     ClearPedTasks(PlayerPedId())
                     StoreExtraNotifications(3, Config.Notifications["SlushyMinigameFail"], Config.Notifications["okok_Title"])
                 end)
-            elseif Config.Minigame == false then
-                if Config.InteractSound == true then
+            elseif Config.Framework.Minigame == false then
+                if Config.Framework.InteractSound == true then
                     TriggerServerEvent("InteractSound_SV:PlayOnSource", "pour-slushy", 0.3)
                 end
                 TaskStartScenarioInPlace(ped, "WORLD_HUMAN_HANG_OUT_STREET", 0, true)
@@ -247,12 +247,12 @@ AddEventHandler('cr-storeextras:client:OrangeSlushy', function()
     local ped = PlayerPedId()
     QBCore.Functions.TriggerCallback('cr-storeextras:server:SlushyCooldown', function(result)
         if not result then
-            if Config.Minigame == 'qb-lock' then
+            if Config.Framework.Minigame == 'qb-lock' then
                 local seconds = math.random(10, 12)
                 local circles = math.random(4, 8)
                 local success = exports['qb-lock']:StartLockPickCircle(circles, seconds)
                 if success then
-                    if Config.InteractSound == true then
+                    if Config.Framework.InteractSound == true then
                         TriggerServerEvent("InteractSound_SV:PlayOnSource", "pour-slushy", 0.3)
                     end
                     TaskStartScenarioInPlace(ped, "WORLD_HUMAN_HANG_OUT_STREET", 0, true)
@@ -276,10 +276,10 @@ AddEventHandler('cr-storeextras:client:OrangeSlushy', function()
                     ClearPedTasks(PlayerPedId())
                     StoreExtraNotifications(3, Config.Notifications["SlushyMinigameFail"], Config.Notifications["okok_Title"])
                 end
-            elseif Config.Minigame == 'ps-ui' then
+            elseif Config.Framework.Minigame == 'ps-ui' then
                 exports['ps-ui']:Circle(function(success)
                     if success then
-                        if Config.InteractSound == true then
+                        if Config.Framework.InteractSound == true then
                             TriggerServerEvent("InteractSound_SV:PlayOnSource", "pour-slushy", 0.3)
                         end
                         TaskStartScenarioInPlace(ped, "WORLD_HUMAN_HANG_OUT_STREET", 0, true)
@@ -304,14 +304,14 @@ AddEventHandler('cr-storeextras:client:OrangeSlushy', function()
                         StoreExtraNotifications(3, Config.Notifications["SlushyMinigameFail"], Config.Notifications["okok_Title"])
                     end
                 end, math.random(4, 8), math.random(10, 12))
-            elseif Config.Minigame == 'qb-skillbar' then
+            elseif Config.Framework.Minigame == 'qb-skillbar' then
                 local Skillbar = exports['qb-skillbar']:GetSkillbarObject()
                 Skillbar.Start({
                     duration = math.random(3500, 5000),
                     pos = math.random(10, 30),
                     width = math.random(10, 20),
                 }, function()
-                    if Config.InteractSound == true then
+                    if Config.Framework.InteractSound == true then
                         TriggerServerEvent("InteractSound_SV:PlayOnSource", "pour-slushy", 0.3)
                     end
                     TaskStartScenarioInPlace(ped, "WORLD_HUMAN_HANG_OUT_STREET", 0, true)
@@ -335,8 +335,8 @@ AddEventHandler('cr-storeextras:client:OrangeSlushy', function()
                     ClearPedTasks(PlayerPedId())
                     StoreExtraNotifications(3, Config.Notifications["SlushyMinigameFail"], Config.Notifications["okok_Title"])
                 end)
-            elseif Config.Minigame == false then
-                if Config.InteractSound == true then
+            elseif Config.Framework.Minigame == false then
+                if Config.Framework.InteractSound == true then
                     TriggerServerEvent("InteractSound_SV:PlayOnSource", "pour-slushy", 0.3)
                 end
                 TaskStartScenarioInPlace(ped, "WORLD_HUMAN_HANG_OUT_STREET", 0, true)
@@ -368,12 +368,12 @@ AddEventHandler('cr-storeextras:client:YellowSlushy', function()
     local ped = PlayerPedId()
     QBCore.Functions.TriggerCallback('cr-storeextras:server:SlushyCooldown', function(result)
         if not result then
-            if Config.Minigame == 'qb-lock' then
+            if Config.Framework.Minigame == 'qb-lock' then
                 local seconds = math.random(10, 12)
                 local circles = math.random(4, 8)
                 local success = exports['qb-lock']:StartLockPickCircle(circles, seconds)
                 if success then
-                    if Config.InteractSound == true then
+                    if Config.Framework.InteractSound == true then
                         TriggerServerEvent("InteractSound_SV:PlayOnSource", "pour-slushy", 0.3)
                     end
                     TaskStartScenarioInPlace(ped, "WORLD_HUMAN_HANG_OUT_STREET", 0, true)
@@ -397,10 +397,10 @@ AddEventHandler('cr-storeextras:client:YellowSlushy', function()
                     ClearPedTasks(PlayerPedId())
                     StoreExtraNotifications(3, Config.Notifications["SlushyMinigameFail"], Config.Notifications["okok_Title"])
                 end
-            elseif Config.Minigame == 'ps-ui' then
+            elseif Config.Framework.Minigame == 'ps-ui' then
                 exports['ps-ui']:Circle(function(success)
                     if success then
-                        if Config.InteractSound == true then
+                        if Config.Framework.InteractSound == true then
                             TriggerServerEvent("InteractSound_SV:PlayOnSource", "pour-slushy", 0.3)
                         end
                         TaskStartScenarioInPlace(ped, "WORLD_HUMAN_HANG_OUT_STREET", 0, true)
@@ -425,14 +425,14 @@ AddEventHandler('cr-storeextras:client:YellowSlushy', function()
                         StoreExtraNotifications(3, Config.Notifications["SlushyMinigameFail"], Config.Notifications["okok_Title"])
                     end
                 end, math.random(4, 8), math.random(10, 12))
-            elseif Config.Minigame == 'qb-skillbar' then
+            elseif Config.Framework.Minigame == 'qb-skillbar' then
                 local Skillbar = exports['qb-skillbar']:GetSkillbarObject()
                 Skillbar.Start({
                     duration = math.random(3500, 5000),
                     pos = math.random(10, 30),
                     width = math.random(10, 20),
                 }, function()
-                    if Config.InteractSound == true then
+                    if Config.Framework.InteractSound == true then
                         TriggerServerEvent("InteractSound_SV:PlayOnSource", "pour-slushy", 0.3)
                     end
                     TaskStartScenarioInPlace(ped, "WORLD_HUMAN_HANG_OUT_STREET", 0, true)
@@ -456,8 +456,8 @@ AddEventHandler('cr-storeextras:client:YellowSlushy', function()
                     ClearPedTasks(PlayerPedId())
                     StoreExtraNotifications(3, Config.Notifications["SlushyMinigameFail"], Config.Notifications["okok_Title"])
                 end)
-            elseif Config.Minigame == false then
-                if Config.InteractSound == true then
+            elseif Config.Framework.Minigame == false then
+                if Config.Framework.InteractSound == true then
                     TriggerServerEvent("InteractSound_SV:PlayOnSource", "pour-slushy", 0.3)
                 end
                 TaskStartScenarioInPlace(ped, "WORLD_HUMAN_HANG_OUT_STREET", 0, true)
@@ -489,12 +489,12 @@ AddEventHandler('cr-storeextras:client:BlueSlushy', function()
     local ped = PlayerPedId()
     QBCore.Functions.TriggerCallback('cr-storeextras:server:SlushyCooldown', function(result)
         if not result then
-            if Config.Minigame == 'qb-lock' then
+            if Config.Framework.Minigame == 'qb-lock' then
                 local seconds = math.random(10, 12)
                 local circles = math.random(4, 8)
                 local success = exports['qb-lock']:StartLockPickCircle(circles, seconds)
                 if success then
-                    if Config.InteractSound == true then
+                    if Config.Framework.InteractSound == true then
                         TriggerServerEvent("InteractSound_SV:PlayOnSource", "pour-slushy", 0.3)
                     end
                     TaskStartScenarioInPlace(ped, "WORLD_HUMAN_HANG_OUT_STREET", 0, true)
@@ -518,10 +518,10 @@ AddEventHandler('cr-storeextras:client:BlueSlushy', function()
                     ClearPedTasks(PlayerPedId())
                     StoreExtraNotifications(3, Config.Notifications["SlushyMinigameFail"], Config.Notifications["okok_Title"])
                 end
-            elseif Config.Minigame == 'ps-ui' then
+            elseif Config.Framework.Minigame == 'ps-ui' then
                 exports['ps-ui']:Circle(function(success)
                     if success then
-                        if Config.InteractSound == true then
+                        if Config.Framework.InteractSound == true then
                             TriggerServerEvent("InteractSound_SV:PlayOnSource", "pour-slushy", 0.3)
                         end
                         TaskStartScenarioInPlace(ped, "WORLD_HUMAN_HANG_OUT_STREET", 0, true)
@@ -546,14 +546,14 @@ AddEventHandler('cr-storeextras:client:BlueSlushy', function()
                         StoreExtraNotifications(3, Config.Notifications["SlushyMinigameFail"], Config.Notifications["okok_Title"])
                     end
                 end, math.random(4, 8), math.random(10, 12))
-            elseif Config.Minigame == 'qb-skillbar' then
+            elseif Config.Framework.Minigame == 'qb-skillbar' then
                 local Skillbar = exports['qb-skillbar']:GetSkillbarObject()
                 Skillbar.Start({
                     duration = math.random(3500, 5000),
                     pos = math.random(10, 30),
                     width = math.random(10, 20),
                 }, function()
-                    if Config.InteractSound == true then
+                    if Config.Framework.InteractSound == true then
                         TriggerServerEvent("InteractSound_SV:PlayOnSource", "pour-slushy", 0.3)
                     end
                     TaskStartScenarioInPlace(ped, "WORLD_HUMAN_HANG_OUT_STREET", 0, true)
@@ -577,8 +577,8 @@ AddEventHandler('cr-storeextras:client:BlueSlushy', function()
                     ClearPedTasks(PlayerPedId())
                     StoreExtraNotifications(3, Config.Notifications["SlushyMinigameFail"], Config.Notifications["okok_Title"])
                 end)
-            elseif Config.Minigame == false then
-                if Config.InteractSound == true then
+            elseif Config.Framework.Minigame == false then
+                if Config.Framework.InteractSound == true then
                     TriggerServerEvent("InteractSound_SV:PlayOnSource", "pour-slushy", 0.3)
                 end
                 TaskStartScenarioInPlace(ped, "WORLD_HUMAN_HANG_OUT_STREET", 0, true)
@@ -610,12 +610,12 @@ AddEventHandler('cr-storeextras:client:RainbowSlushy', function()
     local ped = PlayerPedId()
     QBCore.Functions.TriggerCallback('cr-storeextras:server:SlushyCooldown', function(result)
         if not result then
-            if Config.Minigame == 'qb-lock' then
+            if Config.Framework.Minigame == 'qb-lock' then
                 local seconds = math.random(4, 8)
                 local circles = math.random(6, 10)
                 local success = exports['qb-lock']:StartLockPickCircle(circles, seconds)
                 if success then
-                    if Config.InteractSound == true then
+                    if Config.Framework.InteractSound == true then
                         TriggerServerEvent("InteractSound_SV:PlayOnSource", "pour-slushy", 0.3)
                     end
                     TaskStartScenarioInPlace(ped, "WORLD_HUMAN_HANG_OUT_STREET", 0, true)
@@ -639,10 +639,10 @@ AddEventHandler('cr-storeextras:client:RainbowSlushy', function()
                     ClearPedTasks(PlayerPedId())
                     StoreExtraNotifications(3, Config.Notifications["SlushyMinigameFail"], Config.Notifications["okok_Title"])
                 end
-            elseif Config.Minigame == 'ps-ui' then
+            elseif Config.Framework.Minigame == 'ps-ui' then
                 exports['ps-ui']:Circle(function(success)
                     if success then
-                        if Config.InteractSound == true then
+                        if Config.Framework.InteractSound == true then
                             TriggerServerEvent("InteractSound_SV:PlayOnSource", "pour-slushy", 0.3)
                         end
                         TaskStartScenarioInPlace(ped, "WORLD_HUMAN_HANG_OUT_STREET", 0, true)
@@ -667,14 +667,14 @@ AddEventHandler('cr-storeextras:client:RainbowSlushy', function()
                         StoreExtraNotifications(3, Config.Notifications["SlushyMinigameFail"], Config.Notifications["okok_Title"])
                     end
                 end, math.random(6, 10), math.random(4, 8))
-            elseif Config.Minigame == 'qb-skillbar' then
+            elseif Config.Framework.Minigame == 'qb-skillbar' then
                 local Skillbar = exports['qb-skillbar']:GetSkillbarObject()
                 Skillbar.Start({
                     duration = math.random(1250, 2000),
                     pos = math.random(10, 30),
                     width = math.random(10, 20),
                 }, function()
-                    if Config.InteractSound == true then
+                    if Config.Framework.InteractSound == true then
                         TriggerServerEvent("InteractSound_SV:PlayOnSource", "pour-slushy", 0.3)
                     end
                     TaskStartScenarioInPlace(ped, "WORLD_HUMAN_HANG_OUT_STREET", 0, true)
@@ -698,8 +698,8 @@ AddEventHandler('cr-storeextras:client:RainbowSlushy', function()
                     ClearPedTasks(PlayerPedId())
                     StoreExtraNotifications(3, Config.Notifications["SlushyMinigameFail"], Config.Notifications["okok_Title"])
                 end)
-            elseif Config.Minigame == false then
-                if Config.InteractSound == true then
+            elseif Config.Framework.Minigame == false then
+                if Config.Framework.InteractSound == true then
                     TriggerServerEvent("InteractSound_SV:PlayOnSource", "pour-slushy", 0.3)
                 end
                 TaskStartScenarioInPlace(ped, "WORLD_HUMAN_HANG_OUT_STREET", 0, true)
