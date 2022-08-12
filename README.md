@@ -16,6 +16,7 @@
 * Ice Cream Freezer System's
 * GumBall Stand System's
 * Minigame Configuration
+* Custom Prop Configuration
 
 ## Optional Additions
 * qb-lock (QBCore NP Inspired Lock System)
@@ -24,8 +25,6 @@
 
 ## To Do List
 
-* Rework Improper Images
-* Implement Beer Casing Product
 * Modulate Entire System
 
 # How To Install
