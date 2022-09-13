@@ -90,23 +90,11 @@ ConsumeablesEatGumBall = {
 }
 ```
 
-### Step Two 
-* Replace the following 'AddArmor' Function inside of qb-smallresources/client/consumeables.lua
-```
-function AddArmor()
-    local a = 15
-    while a > 0 do
-        Wait(math.random(750, 1150))
-        a = a - 1
-        AddArmourToPed(PlayerPedId(), 1)
-    end
-end
-```
-
-### Step Three
+### Step Two
 * Place the following snippet inside of qb-smallresources/client/consumeables.lua
 ```
 RegisterNetEvent('consumables:client:slushy', function(itemName)
+    local ped = PlayerPedId()
     TriggerEvent('animations:client:EmoteCommandStart', {"cup"})
     QBCore.Functions.Progressbar("drink_something", "Drinking Slushy...", 3500, false, true, {
         disableMovement = false,
@@ -117,7 +105,7 @@ RegisterNetEvent('consumables:client:slushy', function(itemName)
         ClearPedTasks(PlayerPedId())
         TriggerEvent("inventory:client:ItemBox", QBCore.Shared.Items[itemName], "remove")
         TriggerEvent('animations:client:EmoteCommandStart', {"c"})
-        AddArmor(3)
+        SetPedArmour(ped, 3)
         TriggerServerEvent("QBCore:Server:SetMetaData", "thirst", QBCore.Functions.GetPlayerData().metadata["thirst"] + ConsumeablesSlushy[itemName])
         TriggerServerEvent('hud:server:RelieveStress', math.random(2, 4))
     end)
@@ -212,9 +200,9 @@ RegisterNetEvent('consumables:client:EatGumBall', function(itemName)
     end)
 end)
 ```
-* If you don't want the "Effects", make sure to remove 'RunFast' and 'AddArmor' although 'AddArmor' shouldn't be removed from you're qb-smallresources entirely rather just the Slushy Event.
+* If you don't want the "Effects", make sure to remove 'RunFast()', 'Gumball()' and 'SetPedArmour'.
 
-### Step Four
+### Step Three
 * Place the following snippet inside of qb-smallresources/server/consumeables.lua
 ```
 QBCore.Functions.CreateUseableItem("rainbowslushy", function(source, item)
@@ -344,6 +332,12 @@ QBCore.Functions.CreateUseableItem("cherry_gumball", function(source, item)
         TriggerClientEvent("consumables:client:EatGumBall", src, item.name)
     end
 end)
+```
+
+### Step Four
+* Understand that this 'Step' is only needed if you have Config.Framework.Logs set to 'true'. Being said, insert the following Snippet into qb-smallresources/server/logs.lua 'local Webhooks'
+```
+    ['constantdevelopmentstoreextras'] = 'YOUR_DISCORD_WEBHOOK',
 ```
 
 ## jim-consumeables
